@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Record Player.X
+PROJECTNAME=Record_player
 
 # Active Configuration
 DEFAULTCONF=default

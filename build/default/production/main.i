@@ -1180,7 +1180,7 @@ extern double round(double);
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdbool.h" 1 3
 # 14 "main.c" 2
-# 31 "main.c"
+# 30 "main.c"
 const unsigned char pause_cmd[] = {0x7E, 0xFF, 0x06, 0x0E, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char volup_cmd[] = {0x7E, 0xFF, 0x06, 0x04, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char voldown_cmd[] = {0x7E, 0xFF, 0x06, 0x05, 0x00, 0x00, 0x00, 0xEF};
@@ -1214,7 +1214,7 @@ void init(){
 
 
     PR2 = (uint8_t)((1/(4*16000000*16))-1);
-    uint16_t duty_cycle = (uint16_t) (1/50);
+    uint16_t duty_cycle = (uint16_t) (1/54);
     CCPR1L = duty_cycle >> 2;
 
     if (checkbit(duty_cycle, 0)){

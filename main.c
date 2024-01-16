@@ -156,10 +156,6 @@ void main(void) {
              __delay_ms(500);
             motor_switch(0);
         };
-        
-        
-        
-
     }
     return;
 }

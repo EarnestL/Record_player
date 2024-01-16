@@ -11,17 +11,17 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"36 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+"35 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
 [v _checkbit checkbit `(a  1 e 1 0 ]
-"40
+"39
 [v _init init `(v  1 e 1 0 ]
-"88
+"87
 [v _motor_switch motor_switch `(v  1 e 1 0 ]
-"96
+"95
 [v _UART_transmit UART_transmit `(v  1 e 1 0 ]
-"114
+"113
 [v _Flash Flash `(v  1 e 1 0 ]
-"120
+"119
 [v _main main `(v  1 e 1 0 ]
 [s S161 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
@@ -130,60 +130,60 @@
 [v _TRISB5 TRISB5 `VEb  1 e 0 @1077 ]
 "1654
 [v _TRISB6 TRISB6 `VEb  1 e 0 @1078 ]
-"31 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+"30 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
 [v _pause_cmd pause_cmd `DC[8]uc  1 e 8 0 ]
-"32
+"31
 [v _volup_cmd volup_cmd `DC[8]uc  1 e 8 0 ]
-"33
+"32
 [v _voldown_cmd voldown_cmd `DC[8]uc  1 e 8 0 ]
-"34
+"33
 [v _volset_cmd volset_cmd `DC[8]uc  1 e 8 0 ]
-"120
+"119
 [v _main main `(v  1 e 1 0 ]
 {
-"123
+"122
 [v main@i i `i  1 a 2 12 ]
-"166
+"165
 } 0
-"88
+"87
 [v _motor_switch motor_switch `(v  1 e 1 0 ]
 {
 [v motor_switch@x x `i  1 p 2 0 ]
-"95
+"94
 } 0
-"40
+"39
 [v _init init `(v  1 e 1 0 ]
 {
-"86
+"85
 } 0
-"36
+"35
 [v _checkbit checkbit `(a  1 e 1 0 ]
 {
 [v checkbit@data data `ui  1 p 2 0 ]
 [v checkbit@position position `i  1 p 2 2 ]
-"38
+"37
 } 0
-"96
+"95
 [v _UART_transmit UART_transmit `(v  1 e 1 0 ]
 {
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 wreg ]
-"108
+"107
 [v UART_transmit@i_227 i `i  1 a 2 9 ]
-"99
-[v UART_transmit@i i `i  1 a 2 11 ]
 "98
+[v UART_transmit@i i `i  1 a 2 11 ]
+"97
 [v UART_transmit@cmd cmd `[8]uc  1 a 8 0 ]
-"96
+"95
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 wreg ]
 [v UART_transmit@feedback feedback `uc  1 p 1 0 ]
 [v UART_transmit@para1 para1 `uc  1 p 1 1 ]
 [v UART_transmit@para2 para2 `uc  1 p 1 2 ]
-"98
+"97
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 8 ]
-"112
+"111
 } 0
-"114
+"113
 [v _Flash Flash `(v  1 e 1 0 ]
 {
-"118
+"117
 } 0

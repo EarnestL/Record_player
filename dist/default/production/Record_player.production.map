@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\dat\20230322214319_en.msgs \
   -cn -h+dist/default/production\Record_player.production.sym \
   --cmf=dist/default/production\Record_player.production.cmf -z -Q16F627A \
-  -oC:\Users\earne\AppData\Local\Temp\xcAs2r8.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\earne\AppData\Local\Temp\xcAsvsg.4 --defsym=__MPLAB_BUILD=1 \
   --fixupoverflow=error \
   -Mdist/default/production/Record_player.production.map \
-  --md=C:\Users\earne\AppData\Local\Temp\xcAs2r8.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\earne\AppData\Local\Temp\xcAsvsg.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-03FFh -ASTRCODE=00h-03FFh -ASTRING=00h-0FFhx4 \
   -ACONST=00h-0FFhx4 -AENTRY=00h-0FFhx4 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-014Fh \
@@ -20,7 +20,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\earne\AppData\Local\Temp\xcAs2r8.o \
+  C:\Users\earne\AppData\Local\Temp\xcAsvsg.o \
   dist/default/production\Record_player.production.o 
 
 Object code version is 3.11
@@ -30,7 +30,7 @@ Machine type is 16F627A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\earne\AppData\Local\Temp\xcAs2r8.o
+C:\Users\earne\AppData\Local\Temp\xcAsvsg.o
                 end_init                              0        0        1        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\Record_player.production.o

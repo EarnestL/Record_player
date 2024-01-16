@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Sun Jan 14 22:29:46 2024
+                                                                                               Mon Jan 15 21:10:35 2024
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	16F627A
@@ -338,7 +338,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    324 ;;
    325 ;; *************** function _main *****************
    326 ;; Defined at:
-   327 ;;		line 120 in file "main.c"
+   327 ;;		line 119 in file "main.c"
    328 ;; Parameters:    Size  Location     Type
    329 ;;		None
    330 ;; Auto vars:     Size  Location     Type
@@ -376,18 +376,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    362                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
    363                           
    364                           
-   365                           ;main.c: 122:     init();
+   365                           ;main.c: 121:     init();
    366     0346  2298               	fcall	_init
    367     0347                     l958:
    368                           
-   369                           ;main.c: 123:     for (int i = 1; i < 5; i++){
+   369                           ;main.c: 122:     for (int i = 1; i < 5; i++){
    370     0347  3001               	movlw	1
    371     0348  00FC               	movwf	main@i
    372     0349  3000               	movlw	0
    373     034A  00FD               	movwf	main@i+1
    374     034B                     l964:
    375                           
-   376                           ;main.c: 124:         UART_transmit(volset_cmd, 0x00, 0x00, 0x14);
+   376                           ;main.c: 123:         UART_transmit(volset_cmd, 0x00, 0x00, 0x14);
    377     034B  01F0               	clrf	UART_transmit@feedback
    378     034C  01F1               	clrf	UART_transmit@para1
    379     034D  3014               	movlw	20
@@ -396,7 +396,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    382     0350  22E7               	fcall	_UART_transmit
    383     0351                     l966:
    384                           
-   385                           ;main.c: 125:     };
+   385                           ;main.c: 124:     };
    386     0351  3001               	movlw	1
    387     0352  07FC               	addwf	main@i,f
    388     0353  1803               	skipnc
@@ -421,10 +421,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    407     0363  2B4B               	goto	l964
    408     0364                     u290:
    409     0364                     l84:	
-   410                           ;main.c: 127:     while(1){
+   410                           ;main.c: 126:     while(1){
    411                           
    412                           
-   413                           ;main.c: 128:         if (PORTAbits.RA0){
+   413                           ;main.c: 127:         if (PORTAbits.RA0){
    414     0364  1283               	bcf	3,5	;RP0=0, select bank0
    415     0365  1303               	bcf	3,6	;RP1=0, select bank0
    416     0366  1C05               	btfss	5,0	;volatile
@@ -442,7 +442,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    428     036E                     u310:
    429     036E                     l972:
    430                           
-   431                           ;main.c: 130:             motor_switch(1);
+   431                           ;main.c: 129:             motor_switch(1);
    432     036E  3001               	movlw	1
    433     036F  00F0               	movwf	motor_switch@x
    434     0370  3000               	movlw	0
@@ -450,7 +450,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    436     0372  226B               	fcall	_motor_switch
    437     0373                     l974:
    438                           
-   439                           ;main.c: 131:             _delay((unsigned long)((700)*(16000000/4000.0)));
+   439                           ;main.c: 130:             _delay((unsigned long)((700)*(16000000/4000.0)));
    440     0373  300F               	movlw	15
    441     0374  00FB               	movwf	??_main+2
    442     0375  3035               	movlw	53
@@ -466,13 +466,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    452     037E  2B79               	goto	u397
    453     037F                     l976:
    454                           
-   455                           ;main.c: 132:             PORTAbits.RA1 = 1;
+   455                           ;main.c: 131:             PORTAbits.RA1 = 1;
    456     037F  1283               	bcf	3,5	;RP0=0, select bank0
    457     0380  1303               	bcf	3,6	;RP1=0, select bank0
    458     0381  1485               	bsf	5,1	;volatile
    459     0382                     l978:
    460                           
-   461                           ;main.c: 133:             _delay((unsigned long)((5)*(16000000/4000.0)));
+   461                           ;main.c: 132:             _delay((unsigned long)((5)*(16000000/4000.0)));
    462     0382  301A               	movlw	26
    463     0383  00FA               	movwf	??_main+1
    464     0384  30F8               	movlw	248
@@ -485,13 +485,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    471     038A  0000               	nop
    472     038B                     l980:
    473                           
-   474                           ;main.c: 134:             PORTAbits.RA1 = 0;
+   474                           ;main.c: 133:             PORTAbits.RA1 = 0;
    475     038B  1283               	bcf	3,5	;RP0=0, select bank0
    476     038C  1303               	bcf	3,6	;RP1=0, select bank0
    477     038D  1085               	bcf	5,1	;volatile
    478     038E                     l982:
    479                           
-   480                           ;main.c: 135:             _delay((unsigned long)((500)*(16000000/4000.0)));
+   480                           ;main.c: 134:             _delay((unsigned long)((500)*(16000000/4000.0)));
    481     038E  300B               	movlw	11
    482     038F  00FB               	movwf	??_main+2
    483     0390  3026               	movlw	38
@@ -507,11 +507,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    493     0399  2B94               	goto	u417
    494     039A  2B9B               	nop2
    495                           
-   496                           ;main.c: 136:             while(!PORTAbits.RA7){
+   496                           ;main.c: 135:             while(!PORTAbits.RA7){
    497     039B  2BDB               	goto	l1010
    498     039C                     l90:
    499                           
-   500                           ;main.c: 137:                 if (PORTBbits.RB0){
+   500                           ;main.c: 136:                 if (PORTBbits.RB0){
    501     039C  1C06               	btfss	6,0	;volatile
    502     039D  2B9F               	goto	u321
    503     039E  2BA0               	goto	u320
@@ -527,7 +527,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    513     03A4                     u330:
    514     03A4                     l986:
    515                           
-   516                           ;main.c: 139:                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
+   516                           ;main.c: 138:                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
    517     03A4  01F0               	clrf	UART_transmit@feedback
    518     03A5  01F1               	clrf	UART_transmit@para1
    519     03A6  01F2               	clrf	UART_transmit@para2
@@ -535,7 +535,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    521     03A8  22E7               	fcall	_UART_transmit
    522     03A9                     l988:
    523                           
-   524                           ;main.c: 140:                     _delay((unsigned long)((500)*(16000000/4000.0)));
+   524                           ;main.c: 139:                     _delay((unsigned long)((500)*(16000000/4000.0)));
    525     03A9  300B               	movlw	11
    526     03AA  00FB               	movwf	??_main+2
    527     03AB  3026               	movlw	38
@@ -552,18 +552,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    538     03B5  2BB6               	nop2
    539     03B6                     l990:
    540                           
-   541                           ;main.c: 141:                     motor_switch(0);
+   541                           ;main.c: 140:                     motor_switch(0);
    542     03B6  3000               	movlw	0
    543     03B7  00F0               	movwf	motor_switch@x
    544     03B8  00F1               	movwf	motor_switch@x+1
    545     03B9  226B               	fcall	_motor_switch
    546     03BA                     l992:
    547                           
-   548                           ;main.c: 142:                     Flash();
+   548                           ;main.c: 141:                     Flash();
    549     03BA  225B               	fcall	_Flash
    550     03BB                     l994:
    551                           
-   552                           ;main.c: 144:                 if (PORTBbits.RB6){
+   552                           ;main.c: 143:                 if (PORTBbits.RB6){
    553     03BB  1283               	bcf	3,5	;RP0=0, select bank0
    554     03BC  1303               	bcf	3,6	;RP1=0, select bank0
    555     03BD  1F06               	btfss	6,6	;volatile
@@ -581,7 +581,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    567     03C5                     u350:
    568     03C5                     l998:
    569                           
-   570                           ;main.c: 146:                     UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
+   570                           ;main.c: 145:                     UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
    571     03C5  01F0               	clrf	UART_transmit@feedback
    572     03C6  01F1               	clrf	UART_transmit@para1
    573     03C7  01F2               	clrf	UART_transmit@para2
@@ -589,11 +589,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    575     03C9  22E7               	fcall	_UART_transmit
    576     03CA                     l1000:
    577                           
-   578                           ;main.c: 148:                     Flash();
+   578                           ;main.c: 147:                     Flash();
    579     03CA  225B               	fcall	_Flash
    580     03CB                     l1002:
    581                           
-   582                           ;main.c: 150:                 if (PORTBbits.RB4){
+   582                           ;main.c: 149:                 if (PORTBbits.RB4){
    583     03CB  1283               	bcf	3,5	;RP0=0, select bank0
    584     03CC  1303               	bcf	3,6	;RP1=0, select bank0
    585     03CD  1E06               	btfss	6,4	;volatile
@@ -611,7 +611,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    597     03D5                     u370:
    598     03D5                     l1006:
    599                           
-   600                           ;main.c: 152:                     UART_transmit(voldown_cmd, 0x00, 0x00, 0x00);
+   600                           ;main.c: 151:                     UART_transmit(voldown_cmd, 0x00, 0x00, 0x00);
    601     03D5  01F0               	clrf	UART_transmit@feedback
    602     03D6  01F1               	clrf	UART_transmit@para1
    603     03D7  01F2               	clrf	UART_transmit@para2
@@ -619,11 +619,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    605     03D9  22E7               	fcall	_UART_transmit
    606     03DA                     l1008:
    607                           
-   608                           ;main.c: 153:                     Flash();
+   608                           ;main.c: 152:                     Flash();
    609     03DA  225B               	fcall	_Flash
    610     03DB                     l1010:
    611                           
-   612                           ;main.c: 136:             while(!PORTAbits.RA7){
+   612                           ;main.c: 135:             while(!PORTAbits.RA7){
    613     03DB  1283               	bcf	3,5	;RP0=0, select bank0
    614     03DC  1303               	bcf	3,6	;RP1=0, select bank0
    615     03DD  1F85               	btfss	5,7	;volatile
@@ -634,7 +634,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    620     03E1                     u380:
    621     03E1                     l1012:
    622                           
-   623                           ;main.c: 157:              _delay((unsigned long)((500)*(16000000/4000.0)));
+   623                           ;main.c: 156:              _delay((unsigned long)((500)*(16000000/4000.0)));
    624     03E1  300B               	movlw	11
    625     03E2  00FB               	movwf	??_main+2
    626     03E3  3026               	movlw	38
@@ -651,7 +651,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    637     03ED  2BEE               	nop2
    638     03EE                     l1014:
    639                           
-   640                           ;main.c: 158:             motor_switch(0);
+   640                           ;main.c: 157:             motor_switch(0);
    641     03EE  3000               	movlw	0
    642     03EF  00F0               	movwf	motor_switch@x
    643     03F0  00F1               	movwf	motor_switch@x+1
@@ -664,7 +664,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    650     026B                     __ptext1:	
    651 ;; *************** function _motor_switch *****************
    652 ;; Defined at:
-   653 ;;		line 88 in file "main.c"
+   653 ;;		line 87 in file "main.c"
    654 ;; Parameters:    Size  Location     Type
    655 ;;  x               2    0[COMMON] int 
    656 ;; Auto vars:     Size  Location     Type
@@ -699,7 +699,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    685                           ; Regs used in _motor_switch: [wreg+status,2+status,0]
    686                           
    687                           
-   688                           ;main.c: 89:     if (x){
+   688                           ;main.c: 88:     if (x){
    689     026B  0870               	movf	motor_switch@x,w
    690     026C  0471               	iorwf	motor_switch@x+1,w
    691     026D  1903               	btfsc	3,2
@@ -710,7 +710,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    696     0271                     u250:
    697     0271                     l922:
    698                           
-   699                           ;main.c: 90:         CCP1CONbits.CCP1M = 0b1100;
+   699                           ;main.c: 89:         CCP1CONbits.CCP1M = 0b1100;
    700     0271  1283               	bcf	3,5	;RP0=0, select bank0
    701     0272  1303               	bcf	3,6	;RP1=0, select bank0
    702     0273  0817               	movf	23,w	;volatile
@@ -718,11 +718,11 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    704     0275  380C               	iorlw	12
    705     0276  0097               	movwf	23	;volatile
    706                           
-   707                           ;main.c: 91:     }
+   707                           ;main.c: 90:     }
    708     0277  2A7C               	goto	l65
    709     0278                     l924:
    710                           
-   711                           ;main.c: 93:         CCP1CONbits.CCP1M = 0b0000;
+   711                           ;main.c: 92:         CCP1CONbits.CCP1M = 0b0000;
    712     0278  30F0               	movlw	-16
    713     0279  1283               	bcf	3,5	;RP0=0, select bank0
    714     027A  1303               	bcf	3,6	;RP1=0, select bank0
@@ -735,7 +735,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    721     0298                     __ptext2:	
    722 ;; *************** function _init *****************
    723 ;; Defined at:
-   724 ;;		line 40 in file "main.c"
+   724 ;;		line 39 in file "main.c"
    725 ;; Parameters:    Size  Location     Type
    726 ;;		None
    727 ;; Auto vars:     Size  Location     Type
@@ -771,81 +771,81 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    757                           ; Regs used in _init: [wreg+status,2+status,0+pclath+cstack]
    758                           
    759                           
-   760                           ;main.c: 42:     CMCONbits.CM = 0b111;
+   760                           ;main.c: 41:     CMCONbits.CM = 0b111;
    761     0298  3007               	movlw	7
    762     0299  1283               	bcf	3,5	;RP0=0, select bank0
    763     029A  1303               	bcf	3,6	;RP1=0, select bank0
    764     029B  049F               	iorwf	31,f	;volatile
    765     029C                     l866:
    766                           
-   767                           ;main.c: 43:     CMCONbits.CIS = 0;
+   767                           ;main.c: 42:     CMCONbits.CIS = 0;
    768     029C  119F               	bcf	31,3	;volatile
    769     029D                     l868:
    770                           
-   771                           ;main.c: 44:     CMCONbits.C1INV = 0;
+   771                           ;main.c: 43:     CMCONbits.C1INV = 0;
    772     029D  121F               	bcf	31,4	;volatile
    773     029E                     l870:
    774                           
-   775                           ;main.c: 45:     CMCONbits.C2INV = 0;
+   775                           ;main.c: 44:     CMCONbits.C2INV = 0;
    776     029E  129F               	bcf	31,5	;volatile
    777     029F                     l872:
    778                           
-   779                           ;main.c: 48:     TRISB1 = 1;
+   779                           ;main.c: 47:     TRISB1 = 1;
    780     029F  1683               	bsf	3,5	;RP0=1, select bank1
    781     02A0  1303               	bcf	3,6	;RP1=0, select bank1
    782     02A1  1486               	bsf	6,1	;volatile
    783     02A2                     l874:
    784                           
-   785                           ;main.c: 49:     TRISB2 = 0;
+   785                           ;main.c: 48:     TRISB2 = 0;
    786     02A2  1106               	bcf	6,2	;volatile
    787     02A3                     l876:
    788                           
-   789                           ;main.c: 50:     RCSTAbits.SPEN = 1;
+   789                           ;main.c: 49:     RCSTAbits.SPEN = 1;
    790     02A3  1283               	bcf	3,5	;RP0=0, select bank0
    791     02A4  1303               	bcf	3,6	;RP1=0, select bank0
    792     02A5  1798               	bsf	24,7	;volatile
    793     02A6                     l878:
    794                           
-   795                           ;main.c: 52:     TXSTAbits.SYNC = 0;
+   795                           ;main.c: 51:     TXSTAbits.SYNC = 0;
    796     02A6  1683               	bsf	3,5	;RP0=1, select bank1
    797     02A7  1303               	bcf	3,6	;RP1=0, select bank1
    798     02A8  1218               	bcf	24,4	;volatile
    799     02A9                     l880:
    800                           
-   801                           ;main.c: 53:     TXSTAbits.BRGH = 1;
+   801                           ;main.c: 52:     TXSTAbits.BRGH = 1;
    802     02A9  1518               	bsf	24,2	;volatile
    803     02AA                     l882:
    804                           
-   805                           ;main.c: 55:     TXSTAbits.TXEN = 1;
+   805                           ;main.c: 54:     TXSTAbits.TXEN = 1;
    806     02AA  1698               	bsf	24,5	;volatile
    807     02AB                     l884:
    808                           
-   809                           ;main.c: 56:     RCSTAbits.CREN = 0;
+   809                           ;main.c: 55:     RCSTAbits.CREN = 0;
    810     02AB  1283               	bcf	3,5	;RP0=0, select bank0
    811     02AC  1303               	bcf	3,6	;RP1=0, select bank0
    812     02AD  1218               	bcf	24,4	;volatile
    813     02AE                     l886:
    814                           
-   815                           ;main.c: 59:     SPBRG = 25;
+   815                           ;main.c: 58:     SPBRG = 25;
    816     02AE  3019               	movlw	25
    817     02AF  1683               	bsf	3,5	;RP0=1, select bank1
    818     02B0  1303               	bcf	3,6	;RP1=0, select bank1
    819     02B1  0099               	movwf	25	;volatile
    820     02B2                     l888:
    821                           
-   822                           ;main.c: 63:     PR2 = (uint8_t)((1/(4*16000000*16))-1);
+   822                           ;main.c: 62:     PR2 = (uint8_t)((1/(4*16000000*16))-1);
    823     02B2  30FF               	movlw	255
    824     02B3  0092               	movwf	18	;volatile
    825     02B4                     l890:
    826     02B4                     l892:
    827                           
-   828                           ;main.c: 65:     CCPR1L = duty_cycle >> 2;
+   828                           ;main.c: 64:     CCPR1L = duty_cycle >> 2;
    829     02B4  1283               	bcf	3,5	;RP0=0, select bank0
    830     02B5  1303               	bcf	3,6	;RP1=0, select bank0
    831     02B6  0195               	clrf	21	;volatile
    832     02B7                     l894:
    833                           
-   834                           ;main.c: 67:     if (checkbit(duty_cycle, 0)){
+   834                           ;main.c: 66:     if (checkbit(duty_cycle, 0)){
    835     02B7  3000               	movlw	0
    836     02B8  00F0               	movwf	checkbit@data
    837     02B9  00F1               	movwf	checkbit@data+1
@@ -862,13 +862,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    848     02C3                     u230:
    849     02C3                     l896:
    850                           
-   851                           ;main.c: 68:         CCP1CONbits.CCP1Y = 1;
+   851                           ;main.c: 67:         CCP1CONbits.CCP1Y = 1;
    852     02C3  1283               	bcf	3,5	;RP0=0, select bank0
    853     02C4  1303               	bcf	3,6	;RP1=0, select bank0
    854     02C5  1617               	bsf	23,4	;volatile
    855     02C6                     l898:
    856                           
-   857                           ;main.c: 70:     if (checkbit(duty_cycle, 1)){
+   857                           ;main.c: 69:     if (checkbit(duty_cycle, 1)){
    858     02C6  3000               	movlw	0
    859     02C7  00F0               	movwf	checkbit@data
    860     02C8  00F1               	movwf	checkbit@data+1
@@ -886,54 +886,54 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    872     02D3                     u240:
    873     02D3                     l900:
    874                           
-   875                           ;main.c: 71:         CCP1CONbits.CCP1X = 1;
+   875                           ;main.c: 70:         CCP1CONbits.CCP1X = 1;
    876     02D3  1283               	bcf	3,5	;RP0=0, select bank0
    877     02D4  1303               	bcf	3,6	;RP1=0, select bank0
    878     02D5  1697               	bsf	23,5	;volatile
    879     02D6                     l59:	
-   880                           ;main.c: 72:     };
+   880                           ;main.c: 71:     };
    881                           
    882                           
-   883                           ;main.c: 73:     TRISB3 = 0;
+   883                           ;main.c: 72:     TRISB3 = 0;
    884     02D6  1683               	bsf	3,5	;RP0=1, select bank1
    885     02D7  1303               	bcf	3,6	;RP1=0, select bank1
    886     02D8  1186               	bcf	6,3	;volatile
    887     02D9                     l902:
    888                           
-   889                           ;main.c: 74:     T2CON = 0b00000110;
+   889                           ;main.c: 73:     T2CON = 0b00000110;
    890     02D9  3006               	movlw	6
    891     02DA  1283               	bcf	3,5	;RP0=0, select bank0
    892     02DB  1303               	bcf	3,6	;RP1=0, select bank0
    893     02DC  0092               	movwf	18	;volatile
    894     02DD                     l904:
    895                           
-   896                           ;main.c: 78:     TRISA0 = 1;
+   896                           ;main.c: 77:     TRISA0 = 1;
    897     02DD  1683               	bsf	3,5	;RP0=1, select bank1
    898     02DE  1303               	bcf	3,6	;RP1=0, select bank1
    899     02DF  1405               	bsf	5,0	;volatile
    900     02E0                     l906:
    901                           
-   902                           ;main.c: 79:     TRISA1 = 0;
+   902                           ;main.c: 78:     TRISA1 = 0;
    903     02E0  1085               	bcf	5,1	;volatile
    904     02E1                     l908:
    905                           
-   906                           ;main.c: 80:     TRISA7 = 1;
+   906                           ;main.c: 79:     TRISA7 = 1;
    907     02E1  1785               	bsf	5,7	;volatile
    908     02E2                     l910:
    909                           
-   910                           ;main.c: 81:     TRISB0 = 1;
+   910                           ;main.c: 80:     TRISB0 = 1;
    911     02E2  1406               	bsf	6,0	;volatile
    912     02E3                     l912:
    913                           
-   914                           ;main.c: 82:     TRISB5 = 0;
+   914                           ;main.c: 81:     TRISB5 = 0;
    915     02E3  1286               	bcf	6,5	;volatile
    916     02E4                     l914:
    917                           
-   918                           ;main.c: 83:     TRISB6 = 1;
+   918                           ;main.c: 82:     TRISB6 = 1;
    919     02E4  1706               	bsf	6,6	;volatile
    920     02E5                     l916:
    921                           
-   922                           ;main.c: 84:     TRISB4 = 1;
+   922                           ;main.c: 83:     TRISB4 = 1;
    923     02E5  1606               	bsf	6,4	;volatile
    924     02E6                     l60:
    925     02E6  0008               	return
@@ -943,7 +943,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    929     027D                     __ptext3:	
    930 ;; *************** function _checkbit *****************
    931 ;; Defined at:
-   932 ;;		line 36 in file "main.c"
+   932 ;;		line 35 in file "main.c"
    933 ;; Parameters:    Size  Location     Type
    934 ;;  data            2    0[COMMON] unsigned int 
    935 ;;  position        2    2[COMMON] int 
@@ -979,7 +979,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    965                           ; Regs used in _checkbit: [wreg+status,2+status,0]
    966                           
    967                           
-   968                           ;main.c: 37:     return data & (1 << position);
+   968                           ;main.c: 36:     return data & (1 << position);
    969     027D  0A72               	incf	checkbit@position,w
    970     027E  00F4               	movwf	??_checkbit
    971     027F  3001               	movlw	1
@@ -1019,7 +1019,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1005     02E7                     __ptext4:	
   1006 ;; *************** function _UART_transmit *****************
   1007 ;; Defined at:
-  1008 ;;		line 96 in file "main.c"
+  1008 ;;		line 95 in file "main.c"
   1009 ;; Parameters:    Size  Location     Type
   1010 ;;  CMD             1    wreg     PTR unsigned char 
   1011 ;;		 -> voldown_cmd(8), volup_cmd(8), pause_cmd(8), volset_cmd(8), 
@@ -1066,7 +1066,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1052     02E9  00A8               	movwf	UART_transmit@CMD
   1053     02EA                     l926:
   1054                           
-  1055                           ;main.c: 98:     unsigned char cmd[8] = {0};
+  1055                           ;main.c: 97:     unsigned char cmd[8] = {0};
   1056     02EA  3020               	movlw	UART_transmit@cmd& (0+255)
   1057     02EB  0084               	movwf	4
   1058     02EC  3008               	movlw	8
@@ -1079,12 +1079,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1065     02F2  2AEE               	goto	u260
   1066     02F3                     l928:
   1067                           
-  1068                           ;main.c: 99:     for (int i = 0; i < 8; i++){
+  1068                           ;main.c: 98:     for (int i = 0; i < 8; i++){
   1069     02F3  01AB               	clrf	UART_transmit@i
   1070     02F4  01AC               	clrf	UART_transmit@i+1
   1071     02F5                     l934:
   1072                           
-  1073                           ;main.c: 100:         cmd[i] = CMD[i];
+  1073                           ;main.c: 99:         cmd[i] = CMD[i];
   1074     02F5  1283               	bcf	3,5	;RP0=0, select bank0
   1075     02F6  1303               	bcf	3,6	;RP1=0, select bank0
   1076     02F7  082B               	movf	UART_transmit@i,w
@@ -1100,7 +1100,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1086     0301  0080               	movwf	0
   1087     0302                     l936:
   1088                           
-  1089                           ;main.c: 101:     };
+  1089                           ;main.c: 100:     };
   1090     0302  3001               	movlw	1
   1091     0303  07AB               	addwf	UART_transmit@i,f
   1092     0304  1803               	skipnc
@@ -1126,27 +1126,27 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1112     0315                     u270:
   1113     0315                     l940:
   1114                           
-  1115                           ;main.c: 104:     cmd[4] = feedback;
+  1115                           ;main.c: 103:     cmd[4] = feedback;
   1116     0315  0870               	movf	UART_transmit@feedback,w
   1117     0316  1283               	bcf	3,5	;RP0=0, select bank0
   1118     0317  1303               	bcf	3,6	;RP1=0, select bank0
   1119     0318  00A4               	movwf	UART_transmit@cmd+4
   1120                           
-  1121                           ;main.c: 105:     cmd[5] = para1;
+  1121                           ;main.c: 104:     cmd[5] = para1;
   1122     0319  0871               	movf	UART_transmit@para1,w
   1123     031A  00A5               	movwf	UART_transmit@cmd+5
   1124                           
-  1125                           ;main.c: 106:     cmd[6] = para2;
+  1125                           ;main.c: 105:     cmd[6] = para2;
   1126     031B  0872               	movf	UART_transmit@para2,w
   1127     031C  00A6               	movwf	UART_transmit@cmd+6
   1128     031D                     l942:
   1129                           
-  1130                           ;main.c: 108:     for (int i = 0; i < 8; i++) {
+  1130                           ;main.c: 107:     for (int i = 0; i < 8; i++) {
   1131     031D  01A9               	clrf	UART_transmit@i_227
   1132     031E  01AA               	clrf	UART_transmit@i_227+1
   1133     031F                     l948:
   1134                           
-  1135                           ;main.c: 109:         TXREG = cmd[i];
+  1135                           ;main.c: 108:         TXREG = cmd[i];
   1136     031F  1283               	bcf	3,5	;RP0=0, select bank0
   1137     0320  1303               	bcf	3,6	;RP1=0, select bank0
   1138     0321  0829               	movf	UART_transmit@i_227,w
@@ -1157,7 +1157,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1143     0326  0099               	movwf	25	;volatile
   1144     0327                     l950:
   1145                           
-  1146                           ;main.c: 110:         _delay((unsigned long)((5)*(16000000/4000.0)));
+  1146                           ;main.c: 109:         _delay((unsigned long)((5)*(16000000/4000.0)));
   1147     0327  301A               	movlw	26
   1148     0328  00F4               	movwf	??_UART_transmit+1
   1149     0329  30F8               	movlw	248
@@ -1170,7 +1170,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1156     032F  0000               	nop
   1157     0330                     l952:
   1158                           
-  1159                           ;main.c: 111:     };
+  1159                           ;main.c: 110:     };
   1160     0330  3001               	movlw	1
   1161     0331  1283               	bcf	3,5	;RP0=0, select bank0
   1162     0332  1303               	bcf	3,6	;RP1=0, select bank0
@@ -1204,7 +1204,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1190     025B                     __ptext5:	
   1191 ;; *************** function _Flash *****************
   1192 ;; Defined at:
-  1193 ;;		line 114 in file "main.c"
+  1193 ;;		line 113 in file "main.c"
   1194 ;; Parameters:    Size  Location     Type
   1195 ;;		None
   1196 ;; Auto vars:     Size  Location     Type
@@ -1239,13 +1239,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1225                           ; Regs used in _Flash: [wreg]
   1226                           
   1227                           
-  1228                           ;main.c: 115:     PORTBbits.RB5 = 1;
+  1228                           ;main.c: 114:     PORTBbits.RB5 = 1;
   1229     025B  1283               	bcf	3,5	;RP0=0, select bank0
   1230     025C  1303               	bcf	3,6	;RP1=0, select bank0
   1231     025D  1686               	bsf	6,5	;volatile
   1232     025E                     l796:
   1233                           
-  1234                           ;main.c: 116:     _delay((unsigned long)((5)*(16000000/4000.0)));
+  1234                           ;main.c: 115:     _delay((unsigned long)((5)*(16000000/4000.0)));
   1235     025E  301A               	movlw	26
   1236     025F  00F1               	movwf	??_Flash+1
   1237     0260  30F8               	movlw	248
@@ -1258,7 +1258,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1244     0266  0000               	nop
   1245     0267                     l798:
   1246                           
-  1247                           ;main.c: 117:     PORTBbits.RB5 = 0;
+  1247                           ;main.c: 116:     PORTBbits.RB5 = 0;
   1248     0267  1283               	bcf	3,5	;RP0=0, select bank0
   1249     0268  1303               	bcf	3,6	;RP1=0, select bank0
   1250     0269  1286               	bcf	6,5	;volatile
@@ -1396,7 +1396,7 @@ DATA                 0      0      23      10        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Sun Jan 14 22:29:46 2024
+Symbol Table                                                                                   Mon Jan 15 21:10:35 2024
 
                       pc 0002                       l60 02E6                       l55 0297  
                      l65 027C                       l74 0345                       l90 039C  

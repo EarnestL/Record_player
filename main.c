@@ -21,9 +21,8 @@
 #define LED PORTBbits.RB5
 #define Volup_b PORTBbits.RB6
 #define Voldown_b PORTBbits.RB4
-#define motor PORTBbits.RB3
 // DUTY CYCLE FOR MOTOR
-#define Percent 50
+#define Percent 54
 
 // CLOCK SPEED
 #define _XTAL_FREQ 16000000

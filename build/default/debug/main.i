@@ -1177,8 +1177,18 @@ extern double fmod(double, double);
 extern double trunc(double);
 extern double round(double);
 # 13 "main.c" 2
-# 27 "main.c"
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdbool.h" 1 3
+# 14 "main.c" 2
+# 30 "main.c"
 const unsigned char pause_cmd[] = {0x7E, 0xFF, 0x06, 0x0E, 0x00, 0x00, 0x00, 0xEF};
+const unsigned char volup_cmd[] = {0x7E, 0xFF, 0x06, 0x04, 0x00, 0x00, 0x00, 0xEF};
+const unsigned char voldown_cmd[] = {0x7E, 0xFF, 0x06, 0x05, 0x00, 0x00, 0x00, 0xEF};
+const unsigned char volset_cmd[] = {0x7E, 0xFF, 0x06, 0x06, 0x00, 0x00, 0x00, 0xEF};
+
+_Bool checkbit(uint16_t data, int position){
+    return data & (1 << position);
+};
 
 void init(){
 
@@ -1202,25 +1212,51 @@ void init(){
     SPBRG = 25;
 
 
+
+    PR2 = (uint8_t)((16000000/(4*16*1))-1);
+    uint16_t duty_cycle = (uint16_t) ((100/100)*PR2);
+    CCPR1L = duty_cycle >> 2;
+
+    if (checkbit(duty_cycle, 0)){
+        CCP1CONbits.CCP1Y = 1;
+    };
+    if (checkbit(duty_cycle, 1)){
+        CCP1CONbits.CCP1X = 1;
+    };
+    TRISB3 = 0;
+    T2CON = 0b00000110;
+
+
+
     TRISA0 = 1;
     TRISA1 = 0;
     TRISA7 = 1;
     TRISB0 = 1;
     TRISB5 = 0;
-
+    TRISB6 = 1;
+    TRISB4 = 1;
     return;
-}
+};
 
-void UART_transmit(unsigned char CMD[8], unsigned char feedback, unsigned char par1, unsigned char par2){
+void motor_switch(int x){
+    if (x){
+        CCP1CONbits.CCP1M = 0b1100;
+    }
+    else {
+        CCP1CONbits.CCP1M = 0b0000;
+    };
+};
+void UART_transmit(unsigned char CMD[8], unsigned char feedback, unsigned char para1, unsigned char para2){
 
     unsigned char cmd[8] = {0};
     for (int i = 0; i < 8; i++){
         cmd[i] = CMD[i];
     };
 
-    cmd[4] = CMD[4];
-    cmd[5] = CMD[5];
-    cmd[6] = CMD[6];
+
+    cmd[4] = feedback;
+    cmd[5] = para1;
+    cmd[6] = para2;
 
     for (int i = 0; i < 8; i++) {
         TXREG = cmd[i];
@@ -1230,29 +1266,48 @@ void UART_transmit(unsigned char CMD[8], unsigned char feedback, unsigned char p
 
 void Flash(){
     PORTBbits.RB5 = 1;
-    _delay((unsigned long)((500)*(16000000/4000.0)));
+    _delay((unsigned long)((5)*(16000000/4000.0)));
     PORTBbits.RB5 = 0;
-}
+};
 
 void main(void) {
 
     init();
+    for (int i = 1; i < 5; i++){
+        UART_transmit(volset_cmd, 0x00, 0x00, 0x14);
+    };
 
     while(1){
         if (PORTAbits.RA0){
             while(PORTAbits.RA0);
+            motor_switch(1);
+
+            Flash();
+            PORTAbits.RA1 = 1;
+            _delay((unsigned long)((500)*(16000000/4000.0)));
+            PORTAbits.RA1 = 0;
+
             while(!PORTAbits.RA7){
                 if (PORTBbits.RB0){
                     while(PORTBbits.RB0);
                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
                     Flash();
                 };
+                if (PORTBbits.RB6){
+                    while(PORTBbits.RB6);
+                    UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
+                    Flash();
+                };
+                if (PORTBbits.RB4){
+                    while(PORTBbits.RB4);
+                    UART_transmit(voldown_cmd, 0x00, 0x00, 0x00);
+                    Flash();
+                };
+
             };
+            motor_switch(0);
+            Flash();
         };
-
-
-
-
-    }
+    };
     return;
-}
+};

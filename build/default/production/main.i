@@ -1188,7 +1188,7 @@ const unsigned char volset_cmd[] = {0x7E, 0xFF, 0x06, 0x06, 0x00, 0x00, 0x00, 0x
 
 _Bool checkbit(uint16_t data, int position){
     return data & (1 << position);
-}
+};
 
 void init(){
 
@@ -1213,8 +1213,8 @@ void init(){
 
 
 
-    PR2 = (uint8_t)((1/(4*16000000*16))-1);
-    uint16_t duty_cycle = (uint16_t) (1/54);
+    PR2 = (uint8_t)((16000000/(4*16*1))-1);
+    uint16_t duty_cycle = (uint16_t) ((100/100)*PR2);
     CCPR1L = duty_cycle >> 2;
 
     if (checkbit(duty_cycle, 0)){
@@ -1236,7 +1236,7 @@ void init(){
     TRISB6 = 1;
     TRISB4 = 1;
     return;
-}
+};
 
 void motor_switch(int x){
     if (x){
@@ -1245,7 +1245,7 @@ void motor_switch(int x){
     else {
         CCP1CONbits.CCP1M = 0b0000;
     };
-}
+};
 void UART_transmit(unsigned char CMD[8], unsigned char feedback, unsigned char para1, unsigned char para2){
 
     unsigned char cmd[8] = {0};
@@ -1268,7 +1268,7 @@ void Flash(){
     PORTBbits.RB5 = 1;
     _delay((unsigned long)((5)*(16000000/4000.0)));
     PORTBbits.RB5 = 0;
-}
+};
 
 void main(void) {
 
@@ -1281,23 +1281,21 @@ void main(void) {
         if (PORTAbits.RA0){
             while(PORTAbits.RA0);
             motor_switch(1);
-            _delay((unsigned long)((700)*(16000000/4000.0)));
+
+            Flash();
             PORTAbits.RA1 = 1;
-            _delay((unsigned long)((5)*(16000000/4000.0)));
-            PORTAbits.RA1 = 0;
             _delay((unsigned long)((500)*(16000000/4000.0)));
+            PORTAbits.RA1 = 0;
+
             while(!PORTAbits.RA7){
                 if (PORTBbits.RB0){
                     while(PORTBbits.RB0);
                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
-                    _delay((unsigned long)((500)*(16000000/4000.0)));
-                    motor_switch(0);
                     Flash();
                 };
                 if (PORTBbits.RB6){
                     while(PORTBbits.RB6);
                     UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
-
                     Flash();
                 };
                 if (PORTBbits.RB4){
@@ -1307,13 +1305,9 @@ void main(void) {
                 };
 
             };
-             _delay((unsigned long)((500)*(16000000/4000.0)));
             motor_switch(0);
+            Flash();
         };
-
-
-
-
-    }
+    };
     return;
-}
+};

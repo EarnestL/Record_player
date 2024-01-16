@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Mon Jan 15 23:49:49 2024
+                                                                                               Mon Jan 15 23:40:46 2024
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	16F627A
@@ -139,61 +139,61 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    125     009F                     	;# 
    126                           
    127                           	psect	strings
-   128     0001                     __pstrings:
-   129     0001                     stringtab:
-   130     0001                     __stringtab:
-   131     0001                     stringcode:	
+   128     0002                     __pstrings:
+   129     0002                     stringtab:
+   130     0002                     __stringtab:
+   131     0002                     stringcode:	
    132                           ;	String table - string pointers are 1 byte each
    133                           
-   134     0001                     stringdir:
-   135     0001  3000               	movlw	high stringdir
-   136     0002  008A               	movwf	10
-   137     0003  0804               	movf	4,w
-   138     0004  0A84               	incf	4,f
-   139     0005  0782               	addwf	2,f
-   140     0006                     __stringbase:
-   141     0006  3400               	retlw	0
-   142     0007                     __end_of__stringtab:
-   143     0007                     _volset_cmd:
-   144     0007  347E               	retlw	126
-   145     0008  34FF               	retlw	255
-   146     0009  3406               	retlw	6
-   147     000A  3406               	retlw	6
-   148     000B  3400               	retlw	0
-   149     000C  3400               	retlw	0
-   150     000D  3400               	retlw	0
-   151     000E  34EF               	retlw	239
-   152     000F                     __end_of_volset_cmd:
-   153     000F                     _voldown_cmd:
-   154     000F  347E               	retlw	126
-   155     0010  34FF               	retlw	255
-   156     0011  3406               	retlw	6
-   157     0012  3405               	retlw	5
-   158     0013  3400               	retlw	0
-   159     0014  3400               	retlw	0
-   160     0015  3400               	retlw	0
-   161     0016  34EF               	retlw	239
-   162     0017                     __end_of_voldown_cmd:
-   163     0017                     _volup_cmd:
-   164     0017  347E               	retlw	126
-   165     0018  34FF               	retlw	255
-   166     0019  3406               	retlw	6
-   167     001A  3404               	retlw	4
-   168     001B  3400               	retlw	0
-   169     001C  3400               	retlw	0
-   170     001D  3400               	retlw	0
-   171     001E  34EF               	retlw	239
-   172     001F                     __end_of_volup_cmd:
-   173     001F                     _pause_cmd:
-   174     001F  347E               	retlw	126
-   175     0020  34FF               	retlw	255
-   176     0021  3406               	retlw	6
-   177     0022  340E               	retlw	14
-   178     0023  3400               	retlw	0
-   179     0024  3400               	retlw	0
-   180     0025  3400               	retlw	0
-   181     0026  34EF               	retlw	239
-   182     0027                     __end_of_pause_cmd:
+   134     0002                     stringdir:
+   135     0002  3000               	movlw	high stringdir
+   136     0003  008A               	movwf	10
+   137     0004  0804               	movf	4,w
+   138     0005  0A84               	incf	4,f
+   139     0006  0782               	addwf	2,f
+   140     0007                     __stringbase:
+   141     0007  3400               	retlw	0
+   142     0008                     __end_of__stringtab:
+   143     0008                     _volset_cmd:
+   144     0008  347E               	retlw	126
+   145     0009  34FF               	retlw	255
+   146     000A  3406               	retlw	6
+   147     000B  3406               	retlw	6
+   148     000C  3400               	retlw	0
+   149     000D  3400               	retlw	0
+   150     000E  3400               	retlw	0
+   151     000F  34EF               	retlw	239
+   152     0010                     __end_of_volset_cmd:
+   153     0010                     _voldown_cmd:
+   154     0010  347E               	retlw	126
+   155     0011  34FF               	retlw	255
+   156     0012  3406               	retlw	6
+   157     0013  3405               	retlw	5
+   158     0014  3400               	retlw	0
+   159     0015  3400               	retlw	0
+   160     0016  3400               	retlw	0
+   161     0017  34EF               	retlw	239
+   162     0018                     __end_of_voldown_cmd:
+   163     0018                     _volup_cmd:
+   164     0018  347E               	retlw	126
+   165     0019  34FF               	retlw	255
+   166     001A  3406               	retlw	6
+   167     001B  3404               	retlw	4
+   168     001C  3400               	retlw	0
+   169     001D  3400               	retlw	0
+   170     001E  3400               	retlw	0
+   171     001F  34EF               	retlw	239
+   172     0020                     __end_of_volup_cmd:
+   173     0020                     _pause_cmd:
+   174     0020  347E               	retlw	126
+   175     0021  34FF               	retlw	255
+   176     0022  3406               	retlw	6
+   177     0023  340E               	retlw	14
+   178     0024  3400               	retlw	0
+   179     0025  3400               	retlw	0
+   180     0026  3400               	retlw	0
+   181     0027  34EF               	retlw	239
+   182     0028                     __end_of_pause_cmd:
    183     0005                     _PORTAbits	set	5
    184     0006                     _PORTBbits	set	6
    185     0019                     _TXREG	set	25
@@ -246,68 +246,68 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    232     0032                     	ds	8
    233                           
    234                           	psect	cstackCOMMON
-   235     0070                     __pcstackCOMMON:
-   236     0070                     ?_checkbit:
-   237     0070                     ?_init:	
+   235     0071                     __pcstackCOMMON:
+   236     0071                     ?_checkbit:
+   237     0071                     ?_init:	
    238                           ; 1 bytes @ 0x0
    239                           
-   240     0070                     ?_motor_switch:	
+   240     0071                     ?_motor_switch:	
    241                           ; 1 bytes @ 0x0
    242                           
-   243     0070                     ?_UART_transmit:	
+   243     0071                     ?_UART_transmit:	
    244                           ; 1 bytes @ 0x0
    245                           
-   246     0070                     ?_Flash:	
+   246     0071                     ?_Flash:	
    247                           ; 1 bytes @ 0x0
    248                           
-   249     0070                     ??_Flash:	
+   249     0071                     ??_Flash:	
    250                           ; 1 bytes @ 0x0
    251                           
-   252     0070                     ?_main:	
+   252     0071                     ?_main:	
    253                           ; 1 bytes @ 0x0
    254                           
-   255     0070                     UART_transmit@feedback:	
+   255     0071                     UART_transmit@feedback:	
    256                           ; 1 bytes @ 0x0
    257                           
-   258     0070                     checkbit@data:	
+   258     0071                     checkbit@data:	
    259                           ; 1 bytes @ 0x0
    260                           
-   261     0070                     motor_switch@x:	
+   261     0071                     motor_switch@x:	
    262                           ; 2 bytes @ 0x0
    263                           
    264                           
    265                           ; 2 bytes @ 0x0
-   266     0070                     	ds	1
-   267     0071                     UART_transmit@para1:
+   266     0071                     	ds	1
+   267     0072                     UART_transmit@para1:
    268                           
    269                           ; 1 bytes @ 0x1
-   270     0071                     	ds	1
-   271     0072                     ??_motor_switch:
-   272     0072                     UART_transmit@para2:	
+   270     0072                     	ds	1
+   271     0073                     ??_motor_switch:
+   272     0073                     UART_transmit@para2:	
    273                           ; 1 bytes @ 0x2
    274                           
-   275     0072                     checkbit@position:	
+   275     0073                     checkbit@position:	
    276                           ; 1 bytes @ 0x2
    277                           
    278                           
    279                           ; 2 bytes @ 0x2
-   280     0072                     	ds	1
-   281     0073                     ??_UART_transmit:
+   280     0073                     	ds	1
+   281     0074                     ??_UART_transmit:
    282                           
    283                           ; 1 bytes @ 0x3
-   284     0073                     	ds	1
-   285     0074                     ??_checkbit:
+   284     0074                     	ds	1
+   285     0075                     ??_checkbit:
    286                           
    287                           ; 1 bytes @ 0x4
-   288     0074                     	ds	5
-   289     0079                     ??_init:
+   288     0075                     	ds	5
+   289     007A                     ??_init:
    290                           
    291                           ; 1 bytes @ 0x9
-   292     0079                     	ds	2
-   293     007B                     init@duty_cycle:
+   292     007A                     	ds	2
+   293     007C                     init@duty_cycle:
    294                           
    295                           ; 2 bytes @ 0xB
-   296     007B                     	ds	2
+   296     007C                     	ds	2
    297                           
    298                           	psect	cstackBANK0
    299     0020                     __pcstackBANK0:
@@ -395,10 +395,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    381     0378                     l960:
    382                           
    383                           ;main.c: 123:         UART_transmit(volset_cmd, 0x00, 0x00, 0x14);
-   384     0378  01F0               	clrf	UART_transmit@feedback
-   385     0379  01F1               	clrf	UART_transmit@para1
+   384     0378  01F1               	clrf	UART_transmit@feedback
+   385     0379  01F2               	clrf	UART_transmit@para1
    386     037A  3014               	movlw	20
-   387     037B  00F2               	movwf	UART_transmit@para2
+   387     037B  00F3               	movwf	UART_transmit@para2
    388     037C  3001               	movlw	(low ((_volset_cmd-__stringbase)| (0+32768)))& (0+255)
    389     037D  22AF               	fcall	_UART_transmit
    390     037E                     l962:
@@ -453,9 +453,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    439                           
    440                           ;main.c: 129:             motor_switch(1);
    441     039D  3001               	movlw	1
-   442     039E  00F0               	movwf	motor_switch@x
+   442     039E  00F1               	movwf	motor_switch@x
    443     039F  3000               	movlw	0
-   444     03A0  00F1               	movwf	motor_switch@x+1
+   444     03A0  00F2               	movwf	motor_switch@x+1
    445     03A1  2282               	fcall	_motor_switch
    446                           
    447                           ;main.c: 131:             Flash();
@@ -513,9 +513,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    499     03C1                     l978:
    500                           
    501                           ;main.c: 139:                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
-   502     03C1  01F0               	clrf	UART_transmit@feedback
-   503     03C2  01F1               	clrf	UART_transmit@para1
-   504     03C3  01F2               	clrf	UART_transmit@para2
+   502     03C1  01F1               	clrf	UART_transmit@feedback
+   503     03C2  01F2               	clrf	UART_transmit@para1
+   504     03C3  01F3               	clrf	UART_transmit@para2
    505     03C4  3019               	movlw	(low ((_pause_cmd-__stringbase)| (0+32768)))& (0+255)
    506     03C5  22AF               	fcall	_UART_transmit
    507     03C6                     l980:
@@ -543,9 +543,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    529     03D1                     l986:
    530                           
    531                           ;main.c: 144:                     UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
-   532     03D1  01F0               	clrf	UART_transmit@feedback
-   533     03D2  01F1               	clrf	UART_transmit@para1
-   534     03D3  01F2               	clrf	UART_transmit@para2
+   532     03D1  01F1               	clrf	UART_transmit@feedback
+   533     03D2  01F2               	clrf	UART_transmit@para1
+   534     03D3  01F3               	clrf	UART_transmit@para2
    535     03D4  3011               	movlw	(low ((_volup_cmd-__stringbase)| (0+32768)))& (0+255)
    536     03D5  22AF               	fcall	_UART_transmit
    537     03D6                     l988:
@@ -573,9 +573,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    559     03E1                     l994:
    560                           
    561                           ;main.c: 149:                     UART_transmit(voldown_cmd, 0x00, 0x00, 0x00);
-   562     03E1  01F0               	clrf	UART_transmit@feedback
-   563     03E2  01F1               	clrf	UART_transmit@para1
-   564     03E3  01F2               	clrf	UART_transmit@para2
+   562     03E1  01F1               	clrf	UART_transmit@feedback
+   563     03E2  01F2               	clrf	UART_transmit@para1
+   564     03E3  01F3               	clrf	UART_transmit@para2
    565     03E4  3009               	movlw	(low ((_voldown_cmd-__stringbase)| (0+32768)))& (0+255)
    566     03E5  22AF               	fcall	_UART_transmit
    567     03E6                     l996:
@@ -597,14 +597,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    583                           
    584                           ;main.c: 154:             motor_switch(0);
    585     03ED  3000               	movlw	0
-   586     03EE  00F0               	movwf	motor_switch@x
-   587     03EF  00F1               	movwf	motor_switch@x+1
+   586     03EE  00F1               	movwf	motor_switch@x
+   587     03EF  00F2               	movwf	motor_switch@x+1
    588     03F0  2282               	fcall	_motor_switch
    589                           
    590                           ;main.c: 155:             Flash();
    591     03F1  2272               	fcall	_Flash
    592     03F2  2B93               	goto	l84
-   593     03F3  2800               	ljmp	start
+   593     03F3  2801               	ljmp	start
    594     03F4                     __end_of_main:
    595                           
    596                           	psect	text1
@@ -647,8 +647,8 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    633                           
    634                           
    635                           ;main.c: 88:     if (x){
-   636     0282  0870               	movf	motor_switch@x,w
-   637     0283  0471               	iorwf	motor_switch@x+1,w
+   636     0282  0871               	movf	motor_switch@x,w
+   637     0283  0472               	iorwf	motor_switch@x+1,w
    638     0284  1903               	btfsc	3,2
    639     0285  2A87               	goto	u251
    640     0286  2A88               	goto	u250
@@ -787,39 +787,39 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    773                           
    774                           ;main.c: 63:     uint16_t duty_cycle = (uint16_t) ((100/100)*PR2);
    775     032A  0812               	movf	18,w	;volatile
-   776     032B  00F9               	movwf	??_init
-   777     032C  01FA               	clrf	??_init+1
-   778     032D  0879               	movf	??_init,w
-   779     032E  00FB               	movwf	init@duty_cycle
-   780     032F  087A               	movf	??_init+1,w
-   781     0330  00FC               	movwf	init@duty_cycle+1
+   776     032B  00FA               	movwf	??_init
+   777     032C  01FB               	clrf	??_init+1
+   778     032D  087A               	movf	??_init,w
+   779     032E  00FC               	movwf	init@duty_cycle
+   780     032F  087B               	movf	??_init+1,w
+   781     0330  00FD               	movwf	init@duty_cycle+1
    782     0331                     l882:
    783                           
    784                           ;main.c: 64:     CCPR1L = duty_cycle >> 2;
-   785     0331  087C               	movf	init@duty_cycle+1,w
-   786     0332  00FA               	movwf	??_init+1
-   787     0333  087B               	movf	init@duty_cycle,w
-   788     0334  00F9               	movwf	??_init
+   785     0331  087D               	movf	init@duty_cycle+1,w
+   786     0332  00FB               	movwf	??_init+1
+   787     0333  087C               	movf	init@duty_cycle,w
+   788     0334  00FA               	movwf	??_init
    789     0335  1003               	clrc
-   790     0336  0CFA               	rrf	??_init+1,f
-   791     0337  0CF9               	rrf	??_init,f
+   790     0336  0CFB               	rrf	??_init+1,f
+   791     0337  0CFA               	rrf	??_init,f
    792     0338  1003               	clrc
-   793     0339  0CFA               	rrf	??_init+1,f
-   794     033A  0CF9               	rrf	??_init,f
-   795     033B  0879               	movf	??_init,w
+   793     0339  0CFB               	rrf	??_init+1,f
+   794     033A  0CFA               	rrf	??_init,f
+   795     033B  087A               	movf	??_init,w
    796     033C  1283               	bcf	3,5	;RP0=0, select bank0
    797     033D  1303               	bcf	3,6	;RP1=0, select bank0
    798     033E  0095               	movwf	21	;volatile
    799     033F                     l884:
    800                           
    801                           ;main.c: 66:     if (checkbit(duty_cycle, 0)){
-   802     033F  087C               	movf	init@duty_cycle+1,w
-   803     0340  00F1               	movwf	checkbit@data+1
-   804     0341  087B               	movf	init@duty_cycle,w
-   805     0342  00F0               	movwf	checkbit@data
+   802     033F  087D               	movf	init@duty_cycle+1,w
+   803     0340  00F2               	movwf	checkbit@data+1
+   804     0341  087C               	movf	init@duty_cycle,w
+   805     0342  00F1               	movwf	checkbit@data
    806     0343  3000               	movlw	0
-   807     0344  00F2               	movwf	checkbit@position
-   808     0345  00F3               	movwf	checkbit@position+1
+   807     0344  00F3               	movwf	checkbit@position
+   808     0345  00F4               	movwf	checkbit@position+1
    809     0346  2294               	fcall	_checkbit
    810     0347  3A00               	xorlw	0
    811     0348  1903               	skipnz
@@ -837,14 +837,14 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    823     034F                     l888:
    824                           
    825                           ;main.c: 69:     if (checkbit(duty_cycle, 1)){
-   826     034F  087C               	movf	init@duty_cycle+1,w
-   827     0350  00F1               	movwf	checkbit@data+1
-   828     0351  087B               	movf	init@duty_cycle,w
-   829     0352  00F0               	movwf	checkbit@data
+   826     034F  087D               	movf	init@duty_cycle+1,w
+   827     0350  00F2               	movwf	checkbit@data+1
+   828     0351  087C               	movf	init@duty_cycle,w
+   829     0352  00F1               	movwf	checkbit@data
    830     0353  3001               	movlw	1
-   831     0354  00F2               	movwf	checkbit@position
+   831     0354  00F3               	movwf	checkbit@position
    832     0355  3000               	movlw	0
-   833     0356  00F3               	movwf	checkbit@position+1
+   833     0356  00F4               	movwf	checkbit@position+1
    834     0357  2294               	fcall	_checkbit
    835     0358  3A00               	xorlw	0
    836     0359  1903               	skipnz
@@ -949,28 +949,28 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
    935                           
    936                           
    937                           ;main.c: 36:     return data & (1 << position);
-   938     0294  0A72               	incf	checkbit@position,w
-   939     0295  00F4               	movwf	??_checkbit
+   938     0294  0A73               	incf	checkbit@position,w
+   939     0295  00F5               	movwf	??_checkbit
    940     0296  3001               	movlw	1
-   941     0297  00F5               	movwf	??_checkbit+1
+   941     0297  00F6               	movwf	??_checkbit+1
    942     0298  3000               	movlw	0
-   943     0299  00F6               	movwf	??_checkbit+2
+   943     0299  00F7               	movwf	??_checkbit+2
    944     029A  2A9E               	goto	u204
    945     029B                     u205:
    946     029B  1003               	clrc
-   947     029C  0DF5               	rlf	??_checkbit+1,f
-   948     029D  0DF6               	rlf	??_checkbit+2,f
+   947     029C  0DF6               	rlf	??_checkbit+1,f
+   948     029D  0DF7               	rlf	??_checkbit+2,f
    949     029E                     u204:
-   950     029E  0BF4               	decfsz	??_checkbit,f
+   950     029E  0BF5               	decfsz	??_checkbit,f
    951     029F  2A9B               	goto	u205
-   952     02A0  0870               	movf	checkbit@data,w
-   953     02A1  0575               	andwf	??_checkbit+1,w
-   954     02A2  00F7               	movwf	??_checkbit+3
-   955     02A3  0871               	movf	checkbit@data+1,w
-   956     02A4  0576               	andwf	??_checkbit+2,w
-   957     02A5  00F8               	movwf	??_checkbit+4
-   958     02A6  0877               	movf	??_checkbit+3,w
-   959     02A7  0478               	iorwf	??_checkbit+4,w
+   952     02A0  0871               	movf	checkbit@data,w
+   953     02A1  0576               	andwf	??_checkbit+1,w
+   954     02A2  00F8               	movwf	??_checkbit+3
+   955     02A3  0872               	movf	checkbit@data+1,w
+   956     02A4  0577               	andwf	??_checkbit+2,w
+   957     02A5  00F9               	movwf	??_checkbit+4
+   958     02A6  0878               	movf	??_checkbit+3,w
+   959     02A7  0479               	iorwf	??_checkbit+4,w
    960     02A8  1D03               	btfss	3,2
    961     02A9  2AAB               	goto	u211
    962     02AA  2AAD               	goto	u210
@@ -1059,12 +1059,12 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1045     02BF  082B               	movf	UART_transmit@i,w
   1046     02C0  0728               	addwf	UART_transmit@CMD,w
   1047     02C1  0084               	movwf	4
-  1048     02C2  2001               	fcall	stringdir
-  1049     02C3  00F3               	movwf	??_UART_transmit
+  1048     02C2  2002               	fcall	stringdir
+  1049     02C3  00F4               	movwf	??_UART_transmit
   1050     02C4  082B               	movf	UART_transmit@i,w
   1051     02C5  3E20               	addlw	(low (UART_transmit@cmd| 0))& (0+255)
   1052     02C6  0084               	movwf	4
-  1053     02C7  0873               	movf	??_UART_transmit,w
+  1053     02C7  0874               	movf	??_UART_transmit,w
   1054     02C8  1383               	bcf	3,7	;select IRP bank0
   1055     02C9  0080               	movwf	0
   1056     02CA                     l926:
@@ -1096,17 +1096,17 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1082     02DD                     l930:
   1083                           
   1084                           ;main.c: 103:     cmd[4] = feedback;
-  1085     02DD  0870               	movf	UART_transmit@feedback,w
+  1085     02DD  0871               	movf	UART_transmit@feedback,w
   1086     02DE  1283               	bcf	3,5	;RP0=0, select bank0
   1087     02DF  1303               	bcf	3,6	;RP1=0, select bank0
   1088     02E0  00A4               	movwf	UART_transmit@cmd+4
   1089                           
   1090                           ;main.c: 104:     cmd[5] = para1;
-  1091     02E1  0871               	movf	UART_transmit@para1,w
+  1091     02E1  0872               	movf	UART_transmit@para1,w
   1092     02E2  00A5               	movwf	UART_transmit@cmd+5
   1093                           
   1094                           ;main.c: 105:     cmd[6] = para2;
-  1095     02E3  0872               	movf	UART_transmit@para2,w
+  1095     02E3  0873               	movf	UART_transmit@para2,w
   1096     02E4  00A6               	movwf	UART_transmit@cmd+6
   1097     02E5                     l932:
   1098                           
@@ -1128,13 +1128,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1114                           
   1115                           ;main.c: 109:         _delay((unsigned long)((5)*(16000000/4000.0)));
   1116     02EF  301A               	movlw	26
-  1117     02F0  00F4               	movwf	??_UART_transmit+1
+  1117     02F0  00F5               	movwf	??_UART_transmit+1
   1118     02F1  30F8               	movlw	248
-  1119     02F2  00F3               	movwf	??_UART_transmit
+  1119     02F2  00F4               	movwf	??_UART_transmit
   1120     02F3                     u407:
-  1121     02F3  0BF3               	decfsz	??_UART_transmit,f
+  1121     02F3  0BF4               	decfsz	??_UART_transmit,f
   1122     02F4  2AF3               	goto	u407
-  1123     02F5  0BF4               	decfsz	??_UART_transmit+1,f
+  1123     02F5  0BF5               	decfsz	??_UART_transmit+1,f
   1124     02F6  2AF3               	goto	u407
   1125     02F7  0000               	nop
   1126     02F8                     l942:
@@ -1216,13 +1216,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1202                           
   1203                           ;main.c: 115:     _delay((unsigned long)((5)*(16000000/4000.0)));
   1204     0275  301A               	movlw	26
-  1205     0276  00F1               	movwf	??_Flash+1
+  1205     0276  00F2               	movwf	??_Flash+1
   1206     0277  30F8               	movlw	248
-  1207     0278  00F0               	movwf	??_Flash
+  1207     0278  00F1               	movwf	??_Flash
   1208     0279                     u417:
-  1209     0279  0BF0               	decfsz	??_Flash,f
+  1209     0279  0BF1               	decfsz	??_Flash,f
   1210     027A  2A79               	goto	u417
-  1211     027B  0BF1               	decfsz	??_Flash+1,f
+  1211     027B  0BF2               	decfsz	??_Flash+1,f
   1212     027C  2A79               	goto	u417
   1213     027D  0000               	nop
   1214     027E                     l950:
@@ -1271,7 +1271,7 @@ Data Sizes:
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14     13      13
+    COMMON           13     13      13
     BANK0            80     18      26
     BANK1            80      0       0
     BANK2            48      0       0
@@ -1342,11 +1342,11 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BITCOMMON            E      0       0       0        0.0%
+BITCOMMON            D      0       0       0        0.0%
 EEDATA              80      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      D       D       1       92.9%
+COMMON               D      D       D       1      100.0%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
@@ -1367,7 +1367,7 @@ DATA                 0      0      27      10        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Mon Jan 15 23:49:49 2024
+Symbol Table                                                                                   Mon Jan 15 23:40:46 2024
 
                       pc 0002                       l60 0370                       l55 02AE  
                      l65 0293                       l74 030D                       l90 03B9  
@@ -1411,33 +1411,33 @@ Symbol Table                                                                    
                     u381 03EC                      u295 038F                      u397 03AE  
                     fsr0 0004                      indf 0000                     l1000 03ED  
                    _main 0371                     _init 030E                     btemp 007E  
-            _voldown_cmd 000F                     start 0000                    ?_main 0070  
-                  ?_init 0070                    _T2CON 0012                    _SPBRG 0099  
+            _voldown_cmd 0010                     start 0001                    ?_main 0071  
+                  ?_init 0071                    _T2CON 0012                    _SPBRG 0099  
                   _TXREG 0019                    _Flash 0272                    main@i 0030  
                   pclath 000A                    status 0003                    wtemp0 007E  
         __initialization 03F4             __end_of_main 03F4             __end_of_init 0371  
-                 ??_main 002D                   ??_init 0079                   ?_Flash 0070  
+                 ??_main 002D                   ??_init 007A                   ?_Flash 0071  
                  _CCPR1L 0015                   _TRISA0 0428                   _TRISA1 0429  
                  _TRISB0 0430                   _TRISB1 0431                   _TRISB2 0432  
                  _TRISB3 0433                   _TRISB4 0434                   _TRISA7 042F  
                  _TRISB5 0435                   _TRISB6 0436         __end_of_checkbit 02AF  
-__end_of__initialization 03FE            __end_of_Flash 0282           __pcstackCOMMON 0070  
-         init@duty_cycle 007B                  ??_Flash 0070               __pbssBANK0 0032  
-  __end_of_UART_transmit 030E               __pmaintext 0371                ?_checkbit 0070  
-             __stringtab 0001                _CMCONbits 001F         checkbit@position 0072  
+__end_of__initialization 03FE            __end_of_Flash 0282           __pcstackCOMMON 0071  
+         init@duty_cycle 007C                  ??_Flash 0071               __pbssBANK0 0032  
+  __end_of_UART_transmit 030E               __pmaintext 0371                ?_checkbit 0071  
+             __stringtab 0002                _CMCONbits 001F         checkbit@position 0073  
                 __ptext1 0282                  __ptext2 030E                  __ptext3 0294  
-                __ptext4 02AF                  __ptext5 0272               ??_checkbit 0074  
-      __end_of_pause_cmd 0027     end_of_initialization 03FE            ?_motor_switch 0070  
+                __ptext4 02AF                  __ptext5 0272               ??_checkbit 0075  
+      __end_of_pause_cmd 0028     end_of_initialization 03FE            ?_motor_switch 0071  
               _RCSTAbits 0018                _PORTAbits 0005                _PORTBbits 0006  
-      __end_of_volup_cmd 001F           ??_motor_switch 0072    UART_transmit@feedback 0070  
-            _CCP1CONbits 0017                _TXSTAbits 0098               _volset_cmd 0007  
+      __end_of_volup_cmd 0020           ??_motor_switch 0073    UART_transmit@feedback 0071  
+            _CCP1CONbits 0017                _TXSTAbits 0098               _volset_cmd 0008  
     start_initialization 03F4                ___latbits 0000            __pcstackBANK0 0020  
-           checkbit@data 0070     __end_of_motor_switch 0294       UART_transmit@i_227 0029  
-              __pstrings 0001       UART_transmit@para1 0071       UART_transmit@para2 0072  
-              _pause_cmd 001F           UART_transmit@i 002B              __stringbase 0006  
-              _volup_cmd 0017            _UART_transmit 02AF       __end_of__stringtab 0007  
-               _checkbit 0294        UART_transmit@F573 0032           ?_UART_transmit 0070  
+           checkbit@data 0071     __end_of_motor_switch 0294       UART_transmit@i_227 0029  
+              __pstrings 0002       UART_transmit@para1 0072       UART_transmit@para2 0073  
+              _pause_cmd 0020           UART_transmit@i 002B              __stringbase 0007  
+              _volup_cmd 0018            _UART_transmit 02AF       __end_of__stringtab 0008  
+               _checkbit 0294        UART_transmit@F573 0032           ?_UART_transmit 0071  
            _motor_switch 0282         UART_transmit@CMD 0028         UART_transmit@cmd 0020  
-              stringcode 0001            motor_switch@x 0070      __end_of_voldown_cmd 0017  
-               stringdir 0001                 stringtab 0001       __end_of_volset_cmd 000F  
-        ??_UART_transmit 0073  
+              stringcode 0002            motor_switch@x 0071      __end_of_voldown_cmd 0018  
+               stringdir 0002                 stringtab 0002       __end_of_volset_cmd 0010  
+        ??_UART_transmit 0074  

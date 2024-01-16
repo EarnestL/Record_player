@@ -22,7 +22,7 @@
 #define Volup_b PORTBbits.RB6
 #define Voldown_b PORTBbits.RB4
 // DUTY CYCLE FOR MOTOR
-#define Percent 54
+#define Percent 100
 
 // CLOCK SPEED
 #define _XTAL_FREQ 16000000
@@ -34,7 +34,7 @@ const unsigned char volset_cmd[] = {0x7E, 0xFF, 0x06, 0x06, 0x00, 0x00, 0x00, 0x
 
 bool checkbit(uint16_t data, int position){
     return data & (1 << position);
-}
+};
 
 void init(){
         // Configure the comparator
@@ -59,8 +59,8 @@ void init(){
     
     //pwm config
     
-    PR2 = (uint8_t)((1/(4*_XTAL_FREQ*16))-1); //period of 1 sec
-    uint16_t duty_cycle = (uint16_t) (1/Percent);
+    PR2 = (uint8_t)((_XTAL_FREQ/(4*16*1))-1); //period of 1 ms
+    uint16_t duty_cycle = (uint16_t) ((Percent/100)*PR2);
     CCPR1L = duty_cycle >> 2; //set high bits of duty cycle
     //set low bits of duty cycle
     if (checkbit(duty_cycle, 0)){
@@ -82,7 +82,7 @@ void init(){
     TRISB6 = 1;
     TRISB4 = 1;
     return;
-}
+};
 
 void motor_switch(int x){
     if (x){
@@ -91,7 +91,7 @@ void motor_switch(int x){
     else {
         CCP1CONbits.CCP1M = 0b0000;
     };
-}
+};
 void UART_transmit(unsigned char CMD[8], unsigned char feedback, unsigned char para1, unsigned char para2){
     
     unsigned char cmd[8] = {0};
@@ -114,7 +114,7 @@ void Flash(){
     LED = 1;
     __delay_ms(5);
     LED = 0;
-}
+};
 
 void main(void) {
     
@@ -127,23 +127,21 @@ void main(void) {
         if (BUTTON1){
             while(BUTTON1);
             motor_switch(1);
-            __delay_ms(700);
+            
+            Flash();
             PLAY = 1;
-            __delay_ms(5);
-            PLAY = 0;
             __delay_ms(500);
+            PLAY = 0;
+            //__delay_ms(500);
             while(!IDLE){
                 if (Pause_b){
                     while(Pause_b);
                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
-                    __delay_ms(500);
-                    motor_switch(0);
                     Flash();
                 };
                 if (Volup_b){
                     while(Volup_b);
                     UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
-                    //UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
                     Flash();
                 };
                 if (Voldown_b){
@@ -153,9 +151,9 @@ void main(void) {
                 };
                 
             };
-             __delay_ms(500);
             motor_switch(0);
+            Flash();
         };
-    }
+    };
     return;
-}
+};

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug\Record_Player.X.debug.hex">
+  <executable name="dist/default/debug\Record_player.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>1024</length>
-      <used>215</used>
-      <free>809</free>
+      <used>438</used>
+      <free>586</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>224</length>
-      <used>28</used>
-      <free>196</free>
+      <used>41</used>
+      <free>183</free>
     </memory>
   </executable>
 </project>

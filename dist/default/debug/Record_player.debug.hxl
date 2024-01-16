@@ -1,24 +1,24 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- dist/default/production\Record_player.production.hex
- -Odist/default/production\Record_player.production.hex
- -logfile=dist/default/production\Record_player.production.hxl
+ dist/default/debug\Record_player.debug.hex
+ -Odist/default/debug\Record_player.debug.hex
+ -logfile=dist/default/debug\Record_player.debug.hxl
  -addressing=2
 
 ### Memory Usage ###
  Intel Hex-file ranges:
-  0h - 4Dh		(dist/default/production\Record_player.production.hex)
-  4E4h - 7FFh		(dist/default/production\Record_player.production.hex)
-  400Eh - 400Fh		(dist/default/production\Record_player.production.hex)
+  0h - 4Fh		(dist/default/debug\Record_player.debug.hex)
+  4E4h - 7FFh		(dist/default/debug\Record_player.debug.hex)
+  400Eh - 400Fh		(dist/default/debug\Record_player.debug.hex)
  Unused ranges:
-  4Eh - 4E3h
+  50h - 4E3h
   800h - 400Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Intel Hex-file         (dist/default/production\Record_player.production.hex)
+  H1 = Intel Hex-file         (dist/default/debug\Record_player.debug.hex)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -26,7 +26,7 @@
 00000010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00000040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
 000004E0 | -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000004F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

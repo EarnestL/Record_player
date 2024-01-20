@@ -11,17 +11,17 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
+$C:\Users\earne\AppData\Local\Temp\xcAsurg.o
 end_init CODE 0 0 0 1 2 1
 config CONFIG 4 2007 2007 1 2 1
 $dist/default/production\Record_player.production.o
 cinit CODE 0 3F4 3F4 C 2 1
-text1 CODE 0 282 282 12 2 1
-text2 CODE 0 30E 30E 63 2 1
-text3 CODE 0 294 294 1B 2 1
-text4 CODE 0 2AF 2AF 5F 2 1
-text5 CODE 0 272 272 10 2 1
-maintext CODE 0 371 371 83 2 1
+text1 CODE 0 27A 27A 12 2 1
+text2 CODE 0 306 306 63 2 1
+text3 CODE 0 28C 28C 1B 2 1
+text4 CODE 0 2A7 2A7 5F 2 1
+text5 CODE 0 26A 26A 10 2 1
+maintext CODE 0 369 369 8B 2 1
 cstackCOMMON COMMON 1 70 70 D 1 1
 cstackBANK0 BANK0 1 20 20 12 1 1
 bssBANK0 BANK0 1 32 32 8 1 1
@@ -39,18 +39,18 @@ RAM 120-14F 1
 BANK0 3A-6F 1
 BANK1 A0-EF 1
 BANK2 120-14F 1
-CONST 27-271 2
-ENTRY 27-271 2
+CONST 27-269 2
+ENTRY 27-269 2
 IDLOC 2000-2003 2
-CODE 27-271 2
+CODE 27-269 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
 SFR3 180-1EF 1
 COMMON 7D-7D 1
 EEDATA 2100-217F 2
-STRCODE 27-271 2
-STRING 27-271 2
+STRCODE 27-269 2
+STRING 27-269 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -65,122 +65,121 @@ STRING 27-271 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Record_player.production.o
-3F4 cinit CODE >385:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3F4 cinit CODE >388:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3F4 cinit CODE >399:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3F5 cinit CODE >400:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3F6 cinit CODE >401:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3F7 cinit CODE >402:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3F8 cinit CODE >403:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3F9 cinit CODE >404:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3FA cinit CODE >405:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3FB cinit CODE >406:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3FC cinit CODE >407:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3FD cinit CODE >408:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3FE cinit CODE >414:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3FE cinit CODE >416:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-3FF cinit CODE >417:C:\Users\earne\AppData\Local\Temp\xcAs12pc.s
-272 text5 CODE >113:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-272 text5 CODE >114:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-275 text5 CODE >115:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-27E text5 CODE >116:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-281 text5 CODE >117:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2AF text4 CODE >95:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2B2 text4 CODE >97:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2BB text4 CODE >98:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2BD text4 CODE >99:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2CA text4 CODE >100:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2CC text4 CODE >100:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2D5 text4 CODE >100:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2D9 text4 CODE >100:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2DD text4 CODE >103:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2E1 text4 CODE >104:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2E3 text4 CODE >105:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2E5 text4 CODE >107:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2E7 text4 CODE >108:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2EF text4 CODE >109:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2F8 text4 CODE >110:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2FC text4 CODE >110:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-305 text4 CODE >110:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-309 text4 CODE >110:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-30D text4 CODE >111:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-294 text3 CODE >35:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-294 text3 CODE >36:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-29B text3 CODE >36:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-2AE text3 CODE >37:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-30E text2 CODE >39:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-30E text2 CODE >41:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-312 text2 CODE >42:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-313 text2 CODE >43:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-314 text2 CODE >44:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-315 text2 CODE >47:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-318 text2 CODE >48:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-319 text2 CODE >49:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-31C text2 CODE >51:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-31F text2 CODE >52:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-320 text2 CODE >54:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-321 text2 CODE >55:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-324 text2 CODE >58:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-328 text2 CODE >62:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-32A text2 CODE >63:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-331 text2 CODE >64:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-335 text2 CODE >64:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-338 text2 CODE >64:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-33F text2 CODE >66:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-348 text2 CODE >66:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-34C text2 CODE >67:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-34F text2 CODE >69:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-359 text2 CODE >69:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-35D text2 CODE >70:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-360 text2 CODE >71:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-360 text2 CODE >72:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-363 text2 CODE >73:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-367 text2 CODE >77:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-36A text2 CODE >78:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-36B text2 CODE >79:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-36C text2 CODE >80:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-36D text2 CODE >81:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-36E text2 CODE >82:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-36F text2 CODE >83:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-370 text2 CODE >85:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-282 text1 CODE >87:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-282 text1 CODE >88:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-288 text1 CODE >89:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-28E text1 CODE >90:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-28F text1 CODE >92:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-293 text1 CODE >94:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-371 maintext CODE >119:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-371 maintext CODE >121:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-372 maintext CODE >122:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-378 maintext CODE >123:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-37E maintext CODE >124:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-382 maintext CODE >124:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-38B maintext CODE >124:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-38F maintext CODE >124:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-393 maintext CODE >126:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-393 maintext CODE >127:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-399 maintext CODE >128:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-39D maintext CODE >129:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3A2 maintext CODE >131:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3A3 maintext CODE >132:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3A6 maintext CODE >133:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3B5 maintext CODE >134:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3B8 maintext CODE >136:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3B9 maintext CODE >137:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3BD maintext CODE >138:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3C1 maintext CODE >139:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3C6 maintext CODE >140:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3C7 maintext CODE >142:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3CD maintext CODE >143:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3D1 maintext CODE >144:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3D6 maintext CODE >145:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3D7 maintext CODE >147:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3DD maintext CODE >148:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3E1 maintext CODE >149:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3E6 maintext CODE >150:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3E7 maintext CODE >136:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3ED maintext CODE >154:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
-3F1 maintext CODE >155:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3F4 cinit CODE >385:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3F4 cinit CODE >388:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3F4 cinit CODE >399:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3F5 cinit CODE >400:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3F6 cinit CODE >401:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3F7 cinit CODE >402:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3F8 cinit CODE >403:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3F9 cinit CODE >404:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3FA cinit CODE >405:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3FB cinit CODE >406:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3FC cinit CODE >407:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3FD cinit CODE >408:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3FE cinit CODE >414:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3FE cinit CODE >416:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+3FF cinit CODE >417:C:\Users\earne\AppData\Local\Temp\xcAsurg.s
+26A text5 CODE >114:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+26A text5 CODE >115:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+26D text5 CODE >116:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+276 text5 CODE >117:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+279 text5 CODE >118:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2A7 text4 CODE >96:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2AA text4 CODE >98:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2B3 text4 CODE >99:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2B5 text4 CODE >100:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2C2 text4 CODE >101:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2C4 text4 CODE >101:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2CD text4 CODE >101:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2D1 text4 CODE >101:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2D5 text4 CODE >104:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2D9 text4 CODE >105:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2DB text4 CODE >106:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2DD text4 CODE >108:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2DF text4 CODE >109:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2E7 text4 CODE >110:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2F0 text4 CODE >111:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2F4 text4 CODE >111:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2FD text4 CODE >111:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+301 text4 CODE >111:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+305 text4 CODE >112:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+28C text3 CODE >36:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+28C text3 CODE >37:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+293 text3 CODE >37:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+2A6 text3 CODE >38:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+306 text2 CODE >40:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+306 text2 CODE >42:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+30C text2 CODE >45:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+30D text2 CODE >48:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+310 text2 CODE >49:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+311 text2 CODE >50:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+314 text2 CODE >52:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+317 text2 CODE >53:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+318 text2 CODE >55:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+319 text2 CODE >56:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+31C text2 CODE >59:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+320 text2 CODE >63:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+322 text2 CODE >64:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+329 text2 CODE >65:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+32D text2 CODE >65:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+330 text2 CODE >65:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+337 text2 CODE >67:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+340 text2 CODE >67:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+344 text2 CODE >68:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+347 text2 CODE >70:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+351 text2 CODE >70:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+355 text2 CODE >71:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+358 text2 CODE >72:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+358 text2 CODE >73:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+35B text2 CODE >74:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+35F text2 CODE >78:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+362 text2 CODE >79:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+363 text2 CODE >80:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+364 text2 CODE >81:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+365 text2 CODE >82:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+366 text2 CODE >83:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+367 text2 CODE >84:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+368 text2 CODE >86:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+27A text1 CODE >88:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+27A text1 CODE >89:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+280 text1 CODE >90:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+286 text1 CODE >91:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+287 text1 CODE >93:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+28B text1 CODE >95:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+369 maintext CODE >120:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+369 maintext CODE >122:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+36A maintext CODE >123:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+370 maintext CODE >124:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+376 maintext CODE >125:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+37A maintext CODE >125:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+383 maintext CODE >125:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+387 maintext CODE >125:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+38B maintext CODE >127:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+38B maintext CODE >128:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+391 maintext CODE >129:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+395 maintext CODE >130:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+399 maintext CODE >131:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+39E maintext CODE >133:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+39F maintext CODE >134:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3A2 maintext CODE >135:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3B1 maintext CODE >136:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3B4 maintext CODE >138:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3B5 maintext CODE >139:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3BD maintext CODE >140:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3C1 maintext CODE >141:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3C6 maintext CODE >142:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3C7 maintext CODE >144:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3CD maintext CODE >145:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3D1 maintext CODE >146:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3D6 maintext CODE >147:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3D7 maintext CODE >149:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3DD maintext CODE >150:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3E1 maintext CODE >151:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3E6 maintext CODE >152:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3E7 maintext CODE >138:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3ED maintext CODE >156:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+3F1 maintext CODE >157:C:\Users\earne\OneDrive\Desktop\Record_player\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -203,19 +202,19 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 main@i 30 0 BANK0 1 cstackBANK0 dist/default/production\Record_player.production.o
 __Hstrings 0 0 ABS 0 strings -
 __end_of_voldown_cmd 2E 0 STRING 0 strings dist/default/production\Record_player.production.o
-___sp 0 0 STACK 2 stack C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
-_init 61C 0 CODE 0 text2 dist/default/production\Record_player.production.o
-_main 6E2 0 CODE 0 maintext dist/default/production\Record_player.production.o
+___sp 0 0 STACK 2 stack C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+_init 60C 0 CODE 0 text2 dist/default/production\Record_player.production.o
+_main 6D2 0 CODE 0 maintext dist/default/production\Record_player.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Record_player.production.o
-start 0 0 CODE 0 init C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
+start 0 0 CODE 0 init C:\Users\earne\AppData\Local\Temp\xcAsurg.o
 __Hpowerup 0 0 CODE 0 powerup -
 __end_of_volset_cmd 1E 0 STRING 0 strings dist/default/production\Record_player.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\earne\AppData\Local\Temp\xcAsurg.o
 _CMCONbits 1F 0 ABS 0 - dist/default/production\Record_player.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Record_player.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -224,14 +223,14 @@ UART_transmit@i 2B 0 BANK0 1 cstackBANK0 dist/default/production\Record_player.p
 _CCPR1L 15 0 ABS 0 - dist/default/production\Record_player.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 init@duty_cycle 7B 0 COMMON 1 cstackCOMMON dist/default/production\Record_player.production.o
-___stackhi 0 0 ABS 0 - C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
-___stacklo 0 0 ABS 0 - C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
+___stackhi 0 0 ABS 0 - C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+___stacklo 0 0 ABS 0 - C:\Users\earne\AppData\Local\Temp\xcAsurg.o
 start_initialization 7E8 0 CODE 0 cinit dist/default/production\Record_player.production.o
-_UART_transmit 55E 0 CODE 0 text4 dist/default/production\Record_player.production.o
+_UART_transmit 54E 0 CODE 0 text4 dist/default/production\Record_player.production.o
 __end_of_volup_cmd 3E 0 STRING 0 strings dist/default/production\Record_player.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Record_player.production.o
 _TRISA0 428 0 ABS 0 - dist/default/production\Record_player.production.o
-_TRISA1 429 0 ABS 0 - dist/default/production\Record_player.production.o
+_TRISA3 42B 0 ABS 0 - dist/default/production\Record_player.production.o
 _TRISA7 42F 0 ABS 0 - dist/default/production\Record_player.production.o
 _TRISB0 430 0 ABS 0 - dist/default/production\Record_player.production.o
 _TRISB1 431 0 ABS 0 - dist/default/production\Record_player.production.o
@@ -241,7 +240,7 @@ _TRISB4 434 0 ABS 0 - dist/default/production\Record_player.production.o
 _TRISB5 435 0 ABS 0 - dist/default/production\Record_player.production.o
 _TRISB6 436 0 ABS 0 - dist/default/production\Record_player.production.o
 __end_of_pause_cmd 4E 0 STRING 0 strings dist/default/production\Record_player.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
+___int_sp 0 0 STACK 2 stack C:\Users\earne\AppData\Local\Temp\xcAsurg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -286,13 +285,13 @@ __S1 7D 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 2 0 STRING 0 strings dist/default/production\Record_player.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\earne\AppData\Local\Temp\xcAs12pc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\earne\AppData\Local\Temp\xcAsurg.o
 UART_transmit@CMD 28 0 BANK0 1 cstackBANK0 dist/default/production\Record_player.production.o
 UART_transmit@cmd 20 0 BANK0 1 cstackBANK0 dist/default/production\Record_player.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Record_player.production.o
-__end_of_UART_transmit 61C 0 CODE 0 text4 dist/default/production\Record_player.production.o
-__pmaintext 6E2 0 CODE 0 maintext dist/default/production\Record_player.production.o
+__end_of_UART_transmit 60C 0 CODE 0 text4 dist/default/production\Record_player.production.o
+__pmaintext 6D2 0 CODE 0 maintext dist/default/production\Record_player.production.o
 motor_switch@x 70 0 COMMON 1 cstackCOMMON dist/default/production\Record_player.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -309,17 +308,17 @@ __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization 7FC 0 CODE 0 cinit dist/default/production\Record_player.production.o
 __Hintentry 0 0 CODE 0 intentry -
-_motor_switch 504 0 CODE 0 text1 dist/default/production\Record_player.production.o
+_motor_switch 4F4 0 CODE 0 text1 dist/default/production\Record_player.production.o
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
-_checkbit 528 0 CODE 0 text3 dist/default/production\Record_player.production.o
+_checkbit 518 0 CODE 0 text3 dist/default/production\Record_player.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 504 0 CODE 0 text1 dist/default/production\Record_player.production.o
-__ptext2 61C 0 CODE 0 text2 dist/default/production\Record_player.production.o
-__ptext3 528 0 CODE 0 text3 dist/default/production\Record_player.production.o
-__ptext4 55E 0 CODE 0 text4 dist/default/production\Record_player.production.o
-__ptext5 4E4 0 CODE 0 text5 dist/default/production\Record_player.production.o
-__end_of_checkbit 55E 0 CODE 0 text3 dist/default/production\Record_player.production.o
+__ptext1 4F4 0 CODE 0 text1 dist/default/production\Record_player.production.o
+__ptext2 60C 0 CODE 0 text2 dist/default/production\Record_player.production.o
+__ptext3 518 0 CODE 0 text3 dist/default/production\Record_player.production.o
+__ptext4 54E 0 CODE 0 text4 dist/default/production\Record_player.production.o
+__ptext5 4D4 0 CODE 0 text5 dist/default/production\Record_player.production.o
+__end_of_checkbit 54E 0 CODE 0 text3 dist/default/production\Record_player.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -332,11 +331,11 @@ UART_transmit@para2 72 0 COMMON 1 cstackCOMMON dist/default/production\Record_pl
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Record_player.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\Record_player.production.o
 __Hend_init 2 0 CODE 0 end_init -
-__end_of_motor_switch 528 0 CODE 0 text1 dist/default/production\Record_player.production.o
-__end_of_init 6E2 0 CODE 0 text2 dist/default/production\Record_player.production.o
+__end_of_motor_switch 518 0 CODE 0 text1 dist/default/production\Record_player.production.o
+__end_of_init 6D2 0 CODE 0 text2 dist/default/production\Record_player.production.o
 __end_of_main 7E8 0 CODE 0 maintext dist/default/production\Record_player.production.o
-__end_of_Flash 504 0 CODE 0 text5 dist/default/production\Record_player.production.o
-_Flash 4E4 0 CODE 0 text5 dist/default/production\Record_player.production.o
+__end_of_Flash 4F4 0 CODE 0 text5 dist/default/production\Record_player.production.o
+_Flash 4D4 0 CODE 0 text5 dist/default/production\Record_player.production.o
 _SPBRG 99 0 ABS 0 - dist/default/production\Record_player.production.o
 _T2CON 12 0 ABS 0 - dist/default/production\Record_player.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\Record_player.production.o
@@ -375,12 +374,12 @@ _CCP1CONbits 17 0 ABS 0 - dist/default/production\Record_player.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 3F4 7E8 C 2
-text1 0 282 504 12 2
-text2 0 30E 61C 63 2
-text3 0 294 528 1B 2
-text4 0 2AF 55E 5F 2
-text5 0 272 4E4 10 2
-maintext 0 371 6E2 83 2
+text1 0 27A 4F4 12 2
+text2 0 306 60C 63 2
+text3 0 28C 518 1B 2
+text4 0 2A7 54E 5F 2
+text5 0 26A 4D4 10 2
+maintext 0 369 6D2 8B 2
 cstackCOMMON 1 70 70 D 1
 cstackBANK0 1 20 20 1A 1
 reset_vec 0 0 0 1 2

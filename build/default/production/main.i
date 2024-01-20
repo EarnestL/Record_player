@@ -1180,7 +1180,7 @@ extern double round(double);
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdbool.h" 1 3
 # 14 "main.c" 2
-# 30 "main.c"
+# 31 "main.c"
 const unsigned char pause_cmd[] = {0x7E, 0xFF, 0x06, 0x0E, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char volup_cmd[] = {0x7E, 0xFF, 0x06, 0x04, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char voldown_cmd[] = {0x7E, 0xFF, 0x06, 0x05, 0x00, 0x00, 0x00, 0xEF};
@@ -1192,9 +1192,9 @@ _Bool checkbit(uint16_t data, int position){
 
 void init(){
 
-    CMCONbits.CM = 0b111;
-    CMCONbits.CIS = 0;
-    CMCONbits.C1INV = 0;
+    CMCONbits.CM = 0b101;
+
+
     CMCONbits.C2INV = 0;
 
 
@@ -1229,7 +1229,7 @@ void init(){
 
 
     TRISA0 = 1;
-    TRISA1 = 0;
+    TRISA3 = 0;
     TRISA7 = 1;
     TRISB0 = 1;
     TRISB5 = 0;
@@ -1278,17 +1278,18 @@ void main(void) {
     };
 
     while(1){
-        if (PORTAbits.RA0){
+        if (CMCONbits.C2OUT){
+            if (PORTAbits.RA0){
             while(PORTAbits.RA0);
             motor_switch(1);
 
             Flash();
-            PORTAbits.RA1 = 1;
+            PORTAbits.RA3 = 1;
             _delay((unsigned long)((500)*(16000000/4000.0)));
-            PORTAbits.RA1 = 0;
+            PORTAbits.RA3 = 0;
 
             while(!PORTAbits.RA7){
-                if (PORTBbits.RB0){
+                if (PORTBbits.RB0 || !CMCONbits.C2OUT){
                     while(PORTBbits.RB0);
                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
                     Flash();
@@ -1307,7 +1308,9 @@ void main(void) {
             };
             motor_switch(0);
             Flash();
+            };
         };
+
     };
     return;
 };

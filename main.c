@@ -16,11 +16,12 @@
 // DEFINITION FOR CONVENIENCE
 #define BUTTON1 PORTAbits.RA0
 #define Pause_b PORTBbits.RB0
-#define PLAY PORTAbits.RA1
+#define PLAY PORTAbits.RA3
 #define IDLE PORTAbits.RA7
 #define LED PORTBbits.RB5
 #define Volup_b PORTBbits.RB6
 #define Voldown_b PORTBbits.RB4
+#define Arm CMCONbits.C2OUT
 // DUTY CYCLE FOR MOTOR
 #define Percent 100
 
@@ -38,9 +39,9 @@ bool checkbit(uint16_t data, int position){
 
 void init(){
         // Configure the comparator
-    CMCONbits.CM = 0b111; // Turn off the comparator
-    CMCONbits.CIS = 0; // Set the input to C1Vin-
-    CMCONbits.C1INV = 0; // Output polarity is non-inverted
+    CMCONbits.CM = 0b101; // Turn on one comparator
+    //CMCONbits.CIS = 0; // Set the input to C1Vin-
+    //CMCONbits.C1INV = 0; // Output polarity is non-inverted
     CMCONbits.C2INV = 0; // Output polarity is non-inverted
     
     //UART Init
@@ -75,7 +76,7 @@ void init(){
     
     // Set IO pins
     TRISA0 = 1;
-    TRISA1 = 0;
+    TRISA3 = 0;
     TRISA7 = 1;
     TRISB0 = 1;
     TRISB5 = 0;
@@ -124,7 +125,8 @@ void main(void) {
     };
     
     while(1){
-        if (BUTTON1){
+        if (Arm){
+            if (BUTTON1){
             while(BUTTON1);
             motor_switch(1);
             
@@ -134,7 +136,7 @@ void main(void) {
             PLAY = 0;
             //__delay_ms(500);
             while(!IDLE){
-                if (Pause_b){
+                if (Pause_b || !Arm){
                     while(Pause_b);
                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
                     Flash();
@@ -153,7 +155,9 @@ void main(void) {
             };
             motor_switch(0);
             Flash();
+            };
         };
+        
     };
     return;
 };

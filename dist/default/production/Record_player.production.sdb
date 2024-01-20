@@ -11,17 +11,17 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"35 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+"36 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
 [v _checkbit checkbit `(a  1 e 1 0 ]
-"39
+"40
 [v _init init `(v  1 e 1 0 ]
-"87
+"88
 [v _motor_switch motor_switch `(v  1 e 1 0 ]
-"95
+"96
 [v _UART_transmit UART_transmit `(v  1 e 1 0 ]
-"113
+"114
 [v _Flash Flash `(v  1 e 1 0 ]
-"119
+"120
 [v _main main `(v  1 e 1 0 ]
 [s S161 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
@@ -112,8 +112,8 @@
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "1612
 [v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
-"1615
-[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"1621
+[v _TRISA3 TRISA3 `VEb  1 e 0 @1067 ]
 "1633
 [v _TRISA7 TRISA7 `VEb  1 e 0 @1071 ]
 "1636
@@ -130,62 +130,62 @@
 [v _TRISB5 TRISB5 `VEb  1 e 0 @1077 ]
 "1654
 [v _TRISB6 TRISB6 `VEb  1 e 0 @1078 ]
-"30 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+"31 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
 [v _pause_cmd pause_cmd `DC[8]uc  1 e 8 0 ]
-"31
-[v _volup_cmd volup_cmd `DC[8]uc  1 e 8 0 ]
 "32
-[v _voldown_cmd voldown_cmd `DC[8]uc  1 e 8 0 ]
+[v _volup_cmd volup_cmd `DC[8]uc  1 e 8 0 ]
 "33
+[v _voldown_cmd voldown_cmd `DC[8]uc  1 e 8 0 ]
+"34
 [v _volset_cmd volset_cmd `DC[8]uc  1 e 8 0 ]
-"119
+"120
 [v _main main `(v  1 e 1 0 ]
 {
-"122
+"123
 [v main@i i `i  1 a 2 16 ]
-"159
+"163
 } 0
-"87
+"88
 [v _motor_switch motor_switch `(v  1 e 1 0 ]
 {
 [v motor_switch@x x `i  1 p 2 0 ]
-"94
+"95
 } 0
-"39
+"40
 [v _init init `(v  1 e 1 0 ]
 {
-"63
+"64
 [v init@duty_cycle duty_cycle `ui  1 a 2 11 ]
-"85
+"86
 } 0
-"35
+"36
 [v _checkbit checkbit `(a  1 e 1 0 ]
 {
 [v checkbit@data data `ui  1 p 2 0 ]
 [v checkbit@position position `i  1 p 2 2 ]
-"37
+"38
 } 0
-"95
+"96
 [v _UART_transmit UART_transmit `(v  1 e 1 0 ]
 {
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 wreg ]
-"107
+"108
 [v UART_transmit@i_227 i `i  1 a 2 9 ]
-"98
+"99
 [v UART_transmit@i i `i  1 a 2 11 ]
-"97
+"98
 [v UART_transmit@cmd cmd `[8]uc  1 a 8 0 ]
-"95
+"96
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 wreg ]
 [v UART_transmit@feedback feedback `uc  1 p 1 0 ]
 [v UART_transmit@para1 para1 `uc  1 p 1 1 ]
 [v UART_transmit@para2 para2 `uc  1 p 1 2 ]
-"97
+"98
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 8 ]
-"111
+"112
 } 0
-"113
+"114
 [v _Flash Flash `(v  1 e 1 0 ]
 {
-"117
+"118
 } 0

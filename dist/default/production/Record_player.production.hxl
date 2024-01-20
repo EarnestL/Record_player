@@ -9,10 +9,10 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 4Dh		(dist/default/production\Record_player.production.hex)
-  4E4h - 7FFh		(dist/default/production\Record_player.production.hex)
+  4D4h - 7FFh		(dist/default/production\Record_player.production.hex)
   400Eh - 400Fh		(dist/default/production\Record_player.production.hex)
  Unused ranges:
-  4Eh - 4E3h
+  4Eh - 4D3h
   800h - 400Dh
 
 ### Hex Memory Map ###
@@ -28,7 +28,8 @@
 00000030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
-000004E0 | -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000004D0 | -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000004E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000004F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000510 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

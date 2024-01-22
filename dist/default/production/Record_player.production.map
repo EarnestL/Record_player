@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\dat\20230322214319_en.msgs \
   -cn -h+dist/default/production\Record_player.production.sym \
   --cmf=dist/default/production\Record_player.production.cmf -z -Q16F627A \
-  -oC:\Users\earne\AppData\Local\Temp\xcAsurg.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\earne\AppData\Local\Temp\xcAs158k.4 --defsym=__MPLAB_BUILD=1 \
   --fixupoverflow=error \
   -Mdist/default/production/Record_player.production.map \
-  --md=C:\Users\earne\AppData\Local\Temp\xcAsurg.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\earne\AppData\Local\Temp\xcAs158k.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-03FFh -ASTRCODE=00h-03FFh -ASTRING=00h-0FFhx4 \
   -ACONST=00h-0FFhx4 -AENTRY=00h-0FFhx4 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-014Fh \
@@ -20,7 +20,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\earne\AppData\Local\Temp\xcAsurg.o \
+  C:\Users\earne\AppData\Local\Temp\xcAs158k.o \
   dist/default/production\Record_player.production.o 
 
 Object code version is 3.11
@@ -30,38 +30,39 @@ Machine type is 16F627A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\earne\AppData\Local\Temp\xcAsurg.o
+C:\Users\earne\AppData\Local\Temp\xcAs158k.o
                 end_init                              0        0        1        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\Record_player.production.o
                 cinit                               3F4      3F4        C      7E8       0
                 config                             2007     2007        1        0       4
-                text5                               26A      26A       10      4D4       0
-                text4                               2A7      2A7       5F      54E       0
-                text3                               28C      28C       1B      518       0
-                text2                               306      306       63      60C       0
-                text1                               27A      27A       12      4F4       0
-                maintext                            369      369       8B      6D2       0
+                text4                               258      258       5F      4B0       0
+                text3                               23D      23D       1B      47A       0
+                text2                               2B7      2B7       66      56E       0
+                text1                               22B      22B       12      456       0
+                maintext                            31D      31D       D7      63A       0
                 cstackBANK0                          20       20       12       20       1
                 cstackCOMMON                         70       70        D       70       1
+                dataBANK0                            3A       3A        1       20       1
                 bssBANK0                             32       32        8       20       1
-                strings                               1        1       26        2       0
+                strings                               1        1       2E        2       0
+                idataBANK0                          22A      22A        1      454       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 end_init                              0        0        1         0
                 cinit                               3F4      3F4        C         0
-                text5                               26A      26A       10         0
-                text4                               2A7      2A7       5F         0
-                text3                               28C      28C       1B         0
-                text2                               306      306       63         0
-                text1                               27A      27A       12         0
-                maintext                            369      369       8B         0
+                text4                               258      258       5F         0
+                text3                               23D      23D       1B         0
+                text2                               2B7      2B7       66         0
+                text1                               22B      22B       12         0
+                maintext                            31D      31D       D7         0
+                idataBANK0                          22A      22A        1         0
 
         CLASS   STRCODE        
 
         CLASS   STRING         
-                strings                               1        1       26         0
+                strings                               1        1       2E         0
 
         CLASS   CONST          
 
@@ -72,6 +73,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   BANK0          
                 cstackBANK0                          20       20       12         1
+                dataBANK0                            3A       3A        1         1
                 bssBANK0                             32       32        8         1
 
         CLASS   BANK1          
@@ -107,39 +109,39 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000001  000001         0       0  CODE        2
-                strings                        000001  000026  000027         2       0  STRING      2
-                cstackBANK0                    000020  00001A  00003A        20       1  BANK0       1
+                strings                        000001  00002E  00002F         2       0  STRING      2
+                cstackBANK0                    000020  00001B  00003B        20       1  BANK0       1
                 cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
-                text5                          00026A  000010  00027A       4D4       0  CODE        2
-                text1                          00027A  000012  00028C       4F4       0  CODE        2
-                text3                          00028C  00001B  0002A7       518       0  CODE        2
-                text4                          0002A7  00005F  000306       54E       0  CODE        2
-                text2                          000306  000063  000369       60C       0  CODE        2
-                maintext                       000369  00008B  0003F4       6D2       0  CODE        2
+                idataBANK0                     00022A  000001  00022B       454       0  CODE        2
+                text1                          00022B  000012  00023D       456       0  CODE        2
+                text3                          00023D  00001B  000258       47A       0  CODE        2
+                text4                          000258  00005F  0002B7       4B0       0  CODE        2
+                text2                          0002B7  000066  00031D       56E       0  CODE        2
+                maintext                       00031D  0000D7  0003F4       63A       0  CODE        2
                 cinit                          0003F4  00000C  000400       7E8       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            003A-006F             36           1
+        BANK0            003B-006F             35           1
         BANK1            00A0-00EF             50           1
         BANK2            0120-014F             30           1
-        CODE             0027-0269            243           2
+        CODE             002F-0229            1FB           2
         COMMON           007D-007D              1           1
-        CONST            0027-0269            100           2
+        CONST            002F-0229            100           2
         EEDATA           2100-217F             80           2
-        ENTRY            0027-0269            100           2
+        ENTRY            002F-0229            100           2
         IDLOC            2000-2003              4           2
-        RAM              003A-006F             36           1
+        RAM              003B-006F             35           1
                          00A0-00EF             50
                          0120-014F             30
         SFR0             0000-001F             20           1
         SFR1             0080-009F             20           1
         SFR2             0100-011F             20           1
         SFR3             0180-01EF             70           1
-        STRCODE          0027-0269            243           2
-        STRING           0027-0269            100           2
+        STRCODE          002F-0229            1FB           2
+        STRING           002F-0229            100           2
 
                                   Symbol Table
 
@@ -147,13 +149,12 @@ UART_transmit@CMD        cstackBANK0  0028
 UART_transmit@cmd        cstackBANK0  0020
 UART_transmit@feedback   cstackCOMMON 0070
 UART_transmit@i          cstackBANK0  002B
-UART_transmit@i_227      cstackBANK0  0029
+UART_transmit@i_232      cstackBANK0  0029
 UART_transmit@para1      cstackCOMMON 0071
 UART_transmit@para2      cstackCOMMON 0072
 _CCP1CONbits             (abs)        0017
 _CCPR1L                  (abs)        0015
 _CMCONbits               (abs)        001F
-_Flash                   text5        026A
 _PORTAbits               (abs)        0005
 _PORTBbits               (abs)        0006
 _PR2                     (abs)        0092
@@ -162,6 +163,8 @@ _SPBRG                   (abs)        0099
 _T2CON                   (abs)        0012
 _TRISA0                  (abs)        0428
 _TRISA3                  (abs)        042B
+_TRISA4                  (abs)        042C
+_TRISA6                  (abs)        042E
 _TRISA7                  (abs)        042F
 _TRISB0                  (abs)        0430
 _TRISB1                  (abs)        0431
@@ -170,9 +173,10 @@ _TRISB3                  (abs)        0433
 _TRISB4                  (abs)        0434
 _TRISB5                  (abs)        0435
 _TRISB6                  (abs)        0436
+_TRISB7                  (abs)        0437
 _TXREG                   (abs)        0019
 _TXSTAbits               (abs)        0098
-_UART_transmit           text4        02A7
+_UART_transmit           text4        0258
 __Habs1                  abs1         0000
 __Hbank0                 bank0        0000
 __Hbank1                 bank1        0000
@@ -186,9 +190,11 @@ __Hcommon                common       0000
 __Hconfig                config       2008
 __HcstackBANK0           cstackBANK0  0000
 __HcstackCOMMON          cstackCOMMON 0000
+__HdataBANK0             dataBANK0    0000
 __Heeprom_data           eeprom_data  0000
 __Hend_init              end_init     0001
 __Hfunctab               functab      0000
+__HidataBANK0            idataBANK0   0000
 __Hinit                  init         0000
 __Hintentry              intentry     0000
 __Hmaintext              maintext     0000
@@ -220,9 +226,11 @@ __Lcommon                common       0000
 __Lconfig                config       0000
 __LcstackBANK0           cstackBANK0  0000
 __LcstackCOMMON          cstackCOMMON 0000
+__LdataBANK0             dataBANK0    0000
 __Leeprom_data           eeprom_data  0000
 __Lend_init              end_init     0000
 __Lfunctab               functab      0000
+__LidataBANK0            idataBANK0   0000
 __Linit                  init         0000
 __Lintentry              intentry     0000
 __Lmaintext              maintext     0000
@@ -249,39 +257,41 @@ ___latbits               (abs)        0000
 ___sp                    stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
-__end_of_Flash           text5        027A
-__end_of_UART_transmit   text4        0306
+__end_of_UART_transmit   text4        02B7
 __end_of__initialization cinit        03FE
 __end_of__stringtab      strings      0007
-__end_of_checkbit        text3        02A7
-__end_of_init            text2        0369
+__end_of_checkbit        text3        0258
+__end_of_init            text2        031D
 __end_of_main            maintext     03F4
-__end_of_motor_switch    text1        028C
-__end_of_pause_cmd       strings      0027
-__end_of_voldown_cmd     strings      0017
-__end_of_volset_cmd      strings      000F
-__end_of_volup_cmd       strings      001F
+__end_of_motor_switch    text1        023D
+__end_of_pause_cmd       strings      002F
+__end_of_play_cmd        strings      0017
+__end_of_voldown_cmd     strings      0027
+__end_of_volset_cmd      strings      001F
+__end_of_volup_cmd       strings      000F
 __initialization         cinit        03F4
 __pbssBANK0              bssBANK0     0032
 __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0070
-__pmaintext              maintext     0369
+__pdataBANK0             dataBANK0    003A
+__pidataBANK0            idataBANK0   022A
+__pmaintext              maintext     031D
 __pstrings               strings      0001
-__ptext1                 text1        027A
-__ptext2                 text2        0306
-__ptext3                 text3        028C
-__ptext4                 text4        02A7
-__ptext5                 text5        026A
+__ptext1                 text1        022B
+__ptext2                 text2        02B7
+__ptext3                 text3        023D
+__ptext4                 text4        0258
 __stringbase             strings      0006
 __stringtab              strings      0001
-_checkbit                text3        028C
-_init                    text2        0306
-_main                    maintext     0369
-_motor_switch            text1        027A
-_pause_cmd               strings      001F
-_voldown_cmd             strings      000F
-_volset_cmd              strings      0007
-_volup_cmd               strings      0017
+_checkbit                text3        023D
+_init                    text2        02B7
+_main                    maintext     031D
+_motor_switch            text1        022B
+_pause_cmd               strings      0027
+_play_cmd                strings      000F
+_select                  dataBANK0    003A
+_voldown_cmd             strings      001F
+_volset_cmd              strings      0017
 btemp                    (abs)        007E
 checkbit@data            cstackCOMMON 0070
 checkbit@position        cstackCOMMON 0072
@@ -306,21 +316,21 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 shared
 		__stringtab    		STRING         	0001	0000	6
-		_pause_cmd     		STRING         	001F	0000	8
-		_volup_cmd     		STRING         	0017	0000	8
+		_pause_cmd     		STRING         	0027	0000	8
+		_volup_cmd     		STRING         	0000	0000	0
 		__initialization		CODE           	03F4	0000	10
-		_voldown_cmd   		STRING         	000F	0000	8
-		_volset_cmd    		STRING         	0007	0000	8
+		_play_cmd      		STRING         	000F	0000	8
+		_voldown_cmd   		STRING         	001F	0000	8
+		_volset_cmd    		STRING         	0017	0000	8
 
 shared estimated size: 48
 
 main.c
-		_init          		CODE           	0306	0000	99
-		_Flash         		CODE           	026A	0000	16
-		_main          		CODE           	0369	0000	139
-		_checkbit      		CODE           	028C	0000	27
-		_motor_switch  		CODE           	027A	0000	18
-		_UART_transmit 		CODE           	02A7	0000	95
+		_init          		CODE           	02B7	0000	102
+		_main          		CODE           	031D	0000	215
+		_checkbit      		CODE           	023D	0000	27
+		_motor_switch  		CODE           	022B	0000	18
+		_UART_transmit 		CODE           	0258	0000	95
 
-main.c estimated size: 394
+main.c estimated size: 457
 

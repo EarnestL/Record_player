@@ -14,14 +14,17 @@
 #include <stdbool.h>
 
 // DEFINITION FOR CONVENIENCE
-#define BUTTON1 PORTAbits.RA0
+#define Play_b PORTAbits.RA0
 #define Pause_b PORTBbits.RB0
 #define PLAY PORTAbits.RA3
 #define IDLE PORTAbits.RA7
-#define LED PORTBbits.RB5
 #define Volup_b PORTBbits.RB6
 #define Voldown_b PORTBbits.RB4
 #define Arm CMCONbits.C2OUT
+#define Toggle PORTAbits.RA4
+#define LED1 PORTBbits.RB5
+#define LED2 PORTBbits.RB7
+#define LED3 PORTAbits.RA6
 // DUTY CYCLE FOR MOTOR
 #define Percent 100
 
@@ -32,6 +35,9 @@ const unsigned char pause_cmd[] = {0x7E, 0xFF, 0x06, 0x0E, 0x00, 0x00, 0x00, 0xE
 const unsigned char volup_cmd[] = {0x7E, 0xFF, 0x06, 0x04, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char voldown_cmd[] = {0x7E, 0xFF, 0x06, 0x05, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char volset_cmd[] = {0x7E, 0xFF, 0x06, 0x06, 0x00, 0x00, 0x00, 0xEF};
+const unsigned char play_cmd[] = {0x7E, 0xFF, 0x06, 0x03, 0x00, 0x00, 0x00, 0xEF};
+
+unsigned char select = 0x01;
 
 bool checkbit(uint16_t data, int position){
     return data & (1 << position);
@@ -79,9 +85,12 @@ void init(){
     TRISA3 = 0;
     TRISA7 = 1;
     TRISB0 = 1;
-    TRISB5 = 0;
     TRISB6 = 1;
     TRISB4 = 1;
+    TRISA4 = 1;
+    TRISB5 = 0;
+    TRISB7 = 0;
+    TRISA6 = 0;
     return;
 };
 
@@ -111,12 +120,6 @@ void UART_transmit(unsigned char CMD[8], unsigned char feedback, unsigned char p
     };
 };
 
-void Flash(){
-    LED = 1;
-    __delay_ms(5);
-    LED = 0;
-};
-
 void main(void) {
     
     init();
@@ -124,37 +127,59 @@ void main(void) {
         UART_transmit(volset_cmd, 0x00, 0x00, 0x14);
     };
     
+    LED1 = 1;
+    LED2 = 0;
+    LED3 = 0;
+    
     while(1){
-        if (Arm){
-            if (BUTTON1){
-            while(BUTTON1);
-            motor_switch(1);
+        if (Toggle){
+            while(Toggle);
+            if (select == 0x03){
+                select = 0x01;
+            }
+            else{
+                select++;
+            };
             
-            Flash();
-            PLAY = 1;
-            __delay_ms(500);
-            PLAY = 0;
-            //__delay_ms(500);
+            if (select == 1){
+                LED3 = 0;
+                LED1 = 1;
+            }
+            else{
+                if (select == 2){
+                    LED1 = 0;
+                    LED2 = 1;
+                }
+                else{
+                    LED2 = 0;
+                    LED3 = 1;
+                };
+            };
+        };
+        if (Arm){
+            if (Play_b){
+            while(Play_b);
+            motor_switch(1);
+            __delay_ms(400);
+            UART_transmit(play_cmd, 0x00, 0x00, select); // play first track
             while(!IDLE){
                 if (Pause_b || !Arm){
                     while(Pause_b);
                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
-                    Flash();
+                    __delay_ms(250);
+                    motor_switch(0);
                 };
                 if (Volup_b){
                     while(Volup_b);
-                    UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
-                    Flash();
+                    UART_transmit(play_cmd, 0x00, 0x00, 0x02);
                 };
                 if (Voldown_b){
                     while(Voldown_b);
                     UART_transmit(voldown_cmd, 0x00, 0x00, 0x00);
-                    Flash();
                 };
-                
             };
+            __delay_ms(250);
             motor_switch(0);
-            Flash();
             };
         };
         

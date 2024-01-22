@@ -11,19 +11,17 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"36 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+"42 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
 [v _checkbit checkbit `(a  1 e 1 0 ]
-"40
+"46
 [v _init init `(v  1 e 1 0 ]
-"88
+"97
 [v _motor_switch motor_switch `(v  1 e 1 0 ]
-"96
+"105
 [v _UART_transmit UART_transmit `(v  1 e 1 0 ]
-"114
-[v _Flash Flash `(v  1 e 1 0 ]
-"120
+"123
 [v _main main `(v  1 e 1 0 ]
-[s S161 . 1 `uc 1 RA0 1 0 :1:0 
+[s S164 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -33,9 +31,9 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "183 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627a.h
-[u S170 . 1 `S161 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES170  1 e 1 @5 ]
-[s S140 . 1 `uc 1 RB0 1 0 :1:0 
+[u S173 . 1 `S164 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES173  1 e 1 @5 ]
+[s S143 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -45,8 +43,8 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S149 . 1 `S140 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES149  1 e 1 @6 ]
+[u S152 . 1 `S143 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES152  1 e 1 @6 ]
 "532
 [v _T2CON T2CON `VEuc  1 e 1 @18 ]
 "610
@@ -114,6 +112,10 @@
 [v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
 "1621
 [v _TRISA3 TRISA3 `VEb  1 e 0 @1067 ]
+"1624
+[v _TRISA4 TRISA4 `VEb  1 e 0 @1068 ]
+"1630
+[v _TRISA6 TRISA6 `VEb  1 e 0 @1070 ]
 "1633
 [v _TRISA7 TRISA7 `VEb  1 e 0 @1071 ]
 "1636
@@ -130,62 +132,61 @@
 [v _TRISB5 TRISB5 `VEb  1 e 0 @1077 ]
 "1654
 [v _TRISB6 TRISB6 `VEb  1 e 0 @1078 ]
-"31 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
+"1657
+[v _TRISB7 TRISB7 `VEb  1 e 0 @1079 ]
+"34 C:\Users\earne\OneDrive\Desktop\Record_player\main.c
 [v _pause_cmd pause_cmd `DC[8]uc  1 e 8 0 ]
-"32
-[v _volup_cmd volup_cmd `DC[8]uc  1 e 8 0 ]
-"33
+"36
 [v _voldown_cmd voldown_cmd `DC[8]uc  1 e 8 0 ]
-"34
+"37
 [v _volset_cmd volset_cmd `DC[8]uc  1 e 8 0 ]
-"120
+"38
+[v _play_cmd play_cmd `DC[8]uc  1 e 8 0 ]
+"40
+[v _select select `uc  1 e 1 0 ]
+"123
 [v _main main `(v  1 e 1 0 ]
 {
-"123
+"126
 [v main@i i `i  1 a 2 16 ]
-"163
+"188
 } 0
-"88
+"97
 [v _motor_switch motor_switch `(v  1 e 1 0 ]
 {
 [v motor_switch@x x `i  1 p 2 0 ]
-"95
+"104
 } 0
-"40
+"46
 [v _init init `(v  1 e 1 0 ]
 {
-"64
+"70
 [v init@duty_cycle duty_cycle `ui  1 a 2 11 ]
-"86
+"95
 } 0
-"36
+"42
 [v _checkbit checkbit `(a  1 e 1 0 ]
 {
 [v checkbit@data data `ui  1 p 2 0 ]
 [v checkbit@position position `i  1 p 2 2 ]
-"38
+"44
 } 0
-"96
+"105
 [v _UART_transmit UART_transmit `(v  1 e 1 0 ]
 {
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 wreg ]
+"117
+[v UART_transmit@i_232 i `i  1 a 2 9 ]
 "108
-[v UART_transmit@i_227 i `i  1 a 2 9 ]
-"99
 [v UART_transmit@i i `i  1 a 2 11 ]
-"98
+"107
 [v UART_transmit@cmd cmd `[8]uc  1 a 8 0 ]
-"96
+"105
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 wreg ]
 [v UART_transmit@feedback feedback `uc  1 p 1 0 ]
 [v UART_transmit@para1 para1 `uc  1 p 1 1 ]
 [v UART_transmit@para2 para2 `uc  1 p 1 2 ]
-"98
+"107
 [v UART_transmit@CMD CMD `*.24uc  1 a 1 8 ]
-"112
-} 0
-"114
-[v _Flash Flash `(v  1 e 1 0 ]
-{
-"118
+"121
 } 0

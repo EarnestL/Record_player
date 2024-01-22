@@ -1180,11 +1180,14 @@ extern double round(double);
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdbool.h" 1 3
 # 14 "main.c" 2
-# 31 "main.c"
+# 34 "main.c"
 const unsigned char pause_cmd[] = {0x7E, 0xFF, 0x06, 0x0E, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char volup_cmd[] = {0x7E, 0xFF, 0x06, 0x04, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char voldown_cmd[] = {0x7E, 0xFF, 0x06, 0x05, 0x00, 0x00, 0x00, 0xEF};
 const unsigned char volset_cmd[] = {0x7E, 0xFF, 0x06, 0x06, 0x00, 0x00, 0x00, 0xEF};
+const unsigned char play_cmd[] = {0x7E, 0xFF, 0x06, 0x03, 0x00, 0x00, 0x00, 0xEF};
+
+unsigned char select = 0x01;
 
 _Bool checkbit(uint16_t data, int position){
     return data & (1 << position);
@@ -1232,9 +1235,12 @@ void init(){
     TRISA3 = 0;
     TRISA7 = 1;
     TRISB0 = 1;
-    TRISB5 = 0;
     TRISB6 = 1;
     TRISB4 = 1;
+    TRISA4 = 1;
+    TRISB5 = 0;
+    TRISB7 = 0;
+    TRISA6 = 0;
     return;
 };
 
@@ -1264,12 +1270,6 @@ void UART_transmit(unsigned char CMD[8], unsigned char feedback, unsigned char p
     };
 };
 
-void Flash(){
-    PORTBbits.RB5 = 1;
-    _delay((unsigned long)((5)*(16000000/4000.0)));
-    PORTBbits.RB5 = 0;
-};
-
 void main(void) {
 
     init();
@@ -1277,37 +1277,59 @@ void main(void) {
         UART_transmit(volset_cmd, 0x00, 0x00, 0x14);
     };
 
+    PORTBbits.RB5 = 1;
+    PORTBbits.RB7 = 0;
+    PORTAbits.RA6 = 0;
+
     while(1){
+        if (PORTAbits.RA4){
+            while(PORTAbits.RA4);
+            if (select == 0x03){
+                select = 0x01;
+            }
+            else{
+                select++;
+            };
+
+            if (select == 1){
+                PORTAbits.RA6 = 0;
+                PORTBbits.RB5 = 1;
+            }
+            else{
+                if (select == 2){
+                    PORTBbits.RB5 = 0;
+                    PORTBbits.RB7 = 1;
+                }
+                else{
+                    PORTBbits.RB7 = 0;
+                    PORTAbits.RA6 = 1;
+                };
+            };
+        };
         if (CMCONbits.C2OUT){
             if (PORTAbits.RA0){
             while(PORTAbits.RA0);
             motor_switch(1);
-
-            Flash();
-            PORTAbits.RA3 = 1;
-            _delay((unsigned long)((500)*(16000000/4000.0)));
-            PORTAbits.RA3 = 0;
-
+            _delay((unsigned long)((400)*(16000000/4000.0)));
+            UART_transmit(play_cmd, 0x00, 0x00, select);
             while(!PORTAbits.RA7){
                 if (PORTBbits.RB0 || !CMCONbits.C2OUT){
                     while(PORTBbits.RB0);
                     UART_transmit(pause_cmd, 0x00, 0x00, 0x00);
-                    Flash();
+                    _delay((unsigned long)((250)*(16000000/4000.0)));
+                    motor_switch(0);
                 };
                 if (PORTBbits.RB6){
                     while(PORTBbits.RB6);
-                    UART_transmit(volup_cmd, 0x00, 0x00, 0x00);
-                    Flash();
+                    UART_transmit(play_cmd, 0x00, 0x00, 0x02);
                 };
                 if (PORTBbits.RB4){
                     while(PORTBbits.RB4);
                     UART_transmit(voldown_cmd, 0x00, 0x00, 0x00);
-                    Flash();
                 };
-
             };
+            _delay((unsigned long)((250)*(16000000/4000.0)));
             motor_switch(0);
-            Flash();
             };
         };
 
